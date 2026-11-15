@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-14",
-   "nextCheck": "2026-11-15"
+   "lastChecked": "2026-11-15",
+   "nextCheck": "2026-11-16"
   }
  },
  "federal": {
@@ -380,18 +380,18 @@
     }
    ],
    "formsVerified": true,
-   "lastVerified": "2026-11-11",
+   "lastVerified": "2026-11-15",
    "minTax": 0,
    "name": "Arkansas",
    "rate": 4.3,
    "rateNote": "Graduated rates for 2026 (top 4.3% over $11,000). The top rate falls to 4.1% for tax years beginning Jan 1, 2027 (2026 First Extraordinary Session).",
    "rateSource": "https://tax.thomsonreuters.com/news/arkansas-cuts-individual-and-corporate-income-tax-rates/",
    "rateYear": 2026,
-   "sourceName": "Ark. Code Ann. §26-51-440 (FindLaw; confirm against the current official code)",
+   "sourceName": "Ark. Code Ann. §26-51-440 (FindLaw statute text)",
    "sourceUrl": "https://codes.findlaw.com/ar/title-26-taxation/ar-code-sect-26-51-440/",
    "summary": "Arkansas adopts federal Subchapter M (as of Jan 1, 2019), so REITs generally keep the dividends-paid deduction. For tax years beginning on or after Jan 1, 2009, a captive REIT must add back its federal dividends-paid deduction. A REIT that does not become regularly traded within a year of becoming a REIT is treated as never regularly traded.",
    "treatment": "strict",
-   "verified": false,
+   "verified": true,
    "wholeIncome": false
   },
   "AZ": {
@@ -482,7 +482,7 @@
    "minTax": 0,
    "name": "Colorado",
    "rate": 4.4,
-   "rateNote": "4.4% (C.R.S. 39-22-301; 2026 DR 0112EP). Temporary TABOR-triggered reductions under 39-22-627 may apply; not confirmed for 2026. No minimum tax.",
+   "rateNote": "4.4% for 2026 (C.R.S. 39-22-301; 2026 DR 0112EP). Temporary TABOR-triggered reductions under 39-22-627 may apply; not confirmed for 2026. No minimum tax. Amendment 87 (voter-approved per unofficial Nov 2026 results, pending certification) would make the rate graduated from 3.7% to 8.4% starting in 2027.",
    "rateSource": "https://tax.colorado.gov/sites/tax/files/documents/DR0112EP_2026.pdf",
    "rateYear": 2026,
    "sourceName": "C.R.S. 39-22-503 (Colorado Revised Statutes)",
@@ -1012,6 +1012,46 @@
    "treatment": "strict",
    "verified": true
   },
+  "MI": {
+   "captive": "No captive REIT addback found in MCL 206.623 or the Form 4891 instructions; not otherwise confirmed.",
+   "citation": "MCL 206.623; Michigan Income Tax Act Part 2 (Corporate Income Tax)",
+   "code": "MI",
+   "forms": [
+    {
+     "due": "Last day of the 4th month after year end (April 30 for calendar-year filers)",
+     "form": "Form 4891",
+     "name": "Corporate Income Tax Annual Return",
+     "note": "Filing required if gross receipts are $350,000 or more"
+    },
+    {
+     "form": "Form 4913",
+     "name": "Corporate Income Tax Quarterly Return",
+     "note": "Used for estimated payments"
+    },
+    {
+     "form": "Form 4897",
+     "name": "Corporate Income Tax Unitary Business Group Combined Filing Schedule",
+     "note": "Unitary business groups"
+    },
+    {
+     "form": "Form 4899",
+     "name": "Corporate Income Tax Underpayment of Estimated Tax"
+    }
+   ],
+   "formsVerified": false,
+   "lastVerified": "2026-11-15",
+   "minTax": 0,
+   "name": "Michigan",
+   "rate": 6,
+   "rateNote": "Flat 6% of the apportioned tax base (MCL 206.623(1)). Corporations with gross receipts under $350,000 or liability of $100 or less do not file (per Form 4891 instructions; threshold not re-confirmed for 2026).",
+   "rateSource": "https://zeus-milenia.legislature.mi.gov/documents/mcl/pdf/MCL-206-623.pdf",
+   "rateYear": 2026,
+   "sourceName": "MCL 206.623 (Michigan Legislature)",
+   "sourceUrl": "https://zeus-milenia.legislature.mi.gov/documents/mcl/pdf/MCL-206-623.pdf",
+   "summary": "Michigan's 6% corporate income tax starts from a taxpayer's business income (federal taxable income) with the adjustments in MCL 206.623, none of which mention REITs or the dividends-paid deduction, so a REIT's federal dividends-paid deduction appears to flow through. No captive REIT addback was found. Whether a corporate-owned REIT must be included in its owner's unitary business group return is not confirmed.",
+   "treatment": "conf",
+   "verified": false
+  },
   "MN": {
    "captive": "No captive REIT addback: Minn. Stat. §290.0133 has no dividends-paid-deduction addback and §290.17, subd. 4 has no REIT-specific combined-report rule. Instead, §290.21, subd. 4 denies the dividends-received deduction for any REIT dividend, so captive REIT dividends are fully taxable to a corporate parent.",
    "citation": "Minn. Stat. §290.21, subd. 4; §290.0133; §290.17, subd. 4; §290.06, subd. 1; HMN Financial, Inc. v. Comm'r, 782 N.W.2d 558 (Minn. 2010)",
@@ -1325,36 +1365,43 @@
   },
   "OK": {
    "captive": "Captive REIT: a REIT whose shares or beneficial interests are not regularly traded on an established securities market and more than 50% of whose voting power or value is owned or controlled, directly or indirectly, by a single non-exempt entity taxed as a corporation. Non-captive REITs and most qualified REIT subsidiaries are not counted as that entity.",
-   "citation": "Okla. Admin. Code 710:50-17-52; 68 O.S. §2358",
+   "citation": "Okla. Admin. Code 710:50-17-52; 68 O.S. §2358; 2025 Form 512 instructions",
    "code": "OK",
    "exemption": 0,
    "forms": [
     {
+     "due": "30 days after the federal return due date",
      "form": "Form 512",
-     "name": "Oklahoma Corporation Income and Franchise Tax Return"
+     "name": "Oklahoma Corporation Income Tax Return"
     },
     {
-     "form": "OW-8-ES",
-     "name": "Oklahoma Corporate Estimated Tax Vouchers"
+     "form": "OW-8-ESC",
+     "name": "Oklahoma Corporate Estimated Tax Vouchers",
+     "note": "Required if tax is expected to be $500 or more; four equal installments due the 15th day of the 4th, 6th and 9th months and the 1st month after year end"
     },
     {
-     "form": "Rent/interest addback",
+     "captiveOnly": true,
+     "form": "Form 512, Part 1 Column B line 10 (Part 2 line 3 for unitary filers)",
+     "name": "Captive REIT dividends-paid deduction addback"
+    },
+    {
+     "form": "Form 512, Part 1 Column B line 10 (Part 2 line 3 for unitary filers)",
      "name": "Captive REIT rent and interest addback reported by the payor",
-     "note": "Form line not confirmed",
+     "note": "Not required if the captive REIT adds back its dividends-paid deduction",
      "payorOnly": true
     }
    ],
-   "formsVerified": false,
-   "lastVerified": "2026-11-06",
+   "formsVerified": true,
+   "lastVerified": "2026-11-15",
    "minTax": 0,
    "name": "Oklahoma",
    "rate": 4,
-   "rateNote": "Flat 4% corporate income tax. Oklahoma's separate franchise tax was repealed for years after 2023 (not modeled).",
-   "rateSource": "https://taxfoundation.org/data/all/state/state-corporate-income-tax-rates-brackets/",
+   "rateNote": "Flat 4% corporate income tax (2025 Form 512 instructions). Oklahoma's separate franchise tax was repealed for years after 2023 (not modeled).",
+   "rateSource": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/software-developers/Dev512-Pkt-25.pdf",
    "rateYear": 2026,
-   "sourceName": "Okla. Admin. Code 710:50-17-52 (Justia, current through June 2025)",
-   "sourceUrl": "https://regulations.justia.com/states/oklahoma/title-710/chapter-50/subchapter-17/part-5/section-710-50-17-52",
-   "summary": "Oklahoma applies the captive REIT rule at the payor level: a taxpayer that pays rent or interest to a related captive REIT must add those expenses back in computing Oklahoma taxable income (OAC 710:50-17-52, effective 2009). Ownership is tested under IRC §318 as modified by §856(d)(5). Whether the captive REIT itself loses its dividends-paid deduction was not confirmed.",
+   "sourceName": "Oklahoma Tax Commission, 2025 Form 512 instructions (developer packet)",
+   "sourceUrl": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/software-developers/Dev512-Pkt-25.pdf",
+   "summary": "Oklahoma applies captive REIT rules at both levels. A captive REIT that is subject to federal income tax must add back its dividends-paid deduction, and a taxpayer that pays rent or interest to a related captive REIT must add those expenses back unless the captive REIT is already subject to the dividends-paid deduction addback (2025 Form 512 instructions; OAC 710:50-17-52). Non-captive REITs keep the federal dividends-paid deduction.",
    "treatment": "strict",
    "verified": true,
    "wholeIncome": true
@@ -1473,15 +1520,15 @@
      "note": "Captive REIT groups use Schedules F1, I, N and N1 within this return"
     }
    ],
-   "formsVerified": false,
-   "lastVerified": "2026-11-10",
+   "formsVerified": true,
+   "lastVerified": "2026-11-15",
    "minTax": 100,
    "name": "Tennessee",
    "rate": 6.5,
    "rateNote": "Excise tax 6.5% of net earnings; separate franchise tax of $0.25 per $100 of net worth (property measure repealed), $100 minimum.",
    "rateSource": "https://www.tn.gov/content/dam/tn/revenue/documents/forms/fae/fae174instructions2025.pdf",
    "rateYear": 2026,
-   "sourceName": "Tennessee Department of Revenue, 2025 Franchise and Excise Tax Return (FAE 174) Instructions",
+   "sourceName": "Tennessee Department of Revenue, 2025 FAE 174 instructions",
    "sourceUrl": "https://www.tn.gov/content/dam/tn/revenue/documents/forms/fae/fae174instructions2025.pdf",
    "summary": "REITs are subject to Tennessee franchise (net worth) and excise (income) taxes like corporations. A non-captive REIT keeps the federal dividends-paid deduction in its excise tax base, but a captive REIT (80% or more owned by one person or entity and not traded on a national exchange) adds the deduction back unless it is owned by a bank, bank holding company or public REIT. Captive REIT affiliated groups file a combined return. A 2026 bill to remove REIT tax treatment (HB 1777) stalled in committee and was not enacted.",
    "treatment": "strict",
@@ -2525,6 +2572,16 @@
    "status": "proposed",
    "summary": "The Autumn Budget 2026 proposes ending sovereign immunity for UK real estate from 1 January 2029. Sovereigns would remain institutional investors for UK REIT purposes, the holder-of-excessive-rights rules would aggregate their connected vehicles, and an optional UK sovereign REIT holding company would pay 15% on gross PIDs. Consultation closes 20 January 2027; legislation expected in Finance Bill 2027-28.",
    "title": "Sovereign investor tax status and sovereign REIT holding company (consultation)"
+  },
+  "2026-11-15-co-amendment-87": {
+   "date": "2026-11-15",
+   "effective": "Tax years beginning on or after January 1, 2027 (once certified)",
+   "jurisdiction": "Colorado",
+   "sourceName": "Colorado Legislative Council, 2026 Blue Book analysis of Amendment 87",
+   "sourceUrl": "https://leg.colorado.gov/ballots/graduated-income-tax-2/files/blue-book",
+   "status": "proposed",
+   "summary": "Unofficial November 2026 results show Colorado voters approving Amendment 87, which replaces the flat 4.4% income tax with six graduated brackets for individuals and businesses starting in tax year 2027: 3.7% up to $25,000, 4.2%, 4.4%, 7.4%, 7.9% and 8.4% above $1 million. It is not yet officially certified, so the page keeps the 2026 rate of 4.4%.",
+   "title": "Colorado Amendment 87: graduated income tax for corporations from 2027 (voter-approved, pending certification)"
   }
  },
  "reviews": {
@@ -2772,6 +2829,29 @@
     "Kentucky: Forms 720, 720U, 720ES, 2220-K and 720EXT confirmed against the 2025 Form 720U instructions",
     "New Jersey: CBT-100, CBT-100U, CBT-150, CBT-200-T and CBT-160-A/B confirmed against the NJ Division of Taxation 2025 CBT forms page and CBT-150 instructions",
     "Virginia: Forms 500, 500ES and 500C confirmed against Virginia Tax's forms listing"
+   ]
+  },
+  "2026-11-15": {
+   "added": [
+    "Michigan state rules"
+   ],
+   "attention": [
+    "Colorado: Amendment 87 is not yet certified; once it is, 2027 Colorado estimates for REITs and TRSs with Colorado income above $500,000 will rise (top rate 8.4%). The page still uses 4.4%.",
+    "Michigan: no REIT or captive REIT rule found in MCL 206.623 or the Form 4891 instructions, and current-year forms could not be retrieved (forms list based on older official instructions); confirm before relying on it.",
+    "Missouri and Montana: REIT treatment still rests on the absence of any REIT provision in the return instructions; left unverified.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this session), so the user's own websites were not updated today."
+   ],
+   "changed": [
+    "Colorado Amendment 87: graduated corporate income tax from 2027, voter-approved pending certification (Colorado Legislative Council Blue Book; Kutak Rock, Nov 13 2026)"
+   ],
+   "changesFound": 1,
+   "date": "2026-11-15",
+   "summary": "Checked federal (IRS rulings, Treasury guidance, forms), state and international REIT sources since Nov 14. No new federal or international REIT rule changes; recorded Colorado's voter-approved (pending certification) graduated income tax for 2027.",
+   "title": "Daily rule review",
+   "verified": [
+    "Oklahoma: captive REIT treatment corrected (captive REITs add back the dividends-paid deduction; payor rent/interest addback applies otherwise) and estimated form corrected to OW-8-ESC, confirmed against the 2025 Form 512 instructions",
+    "Arkansas: captive REIT definition and dividends-paid deduction addback confirmed against Ark. Code Ann. 26-51-440",
+    "Tennessee: FAE 174 and the Schedule J line 14 captive REIT addback confirmed against the 2025 FAE 174 instructions"
    ]
   }
  }
