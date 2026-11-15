@@ -378,6 +378,12 @@ input[type=date]{font:inherit;font-size:14px;padding:8px 10px;border:1px solid v
 .tbview{flex-direction:row;align-items:center;gap:8px;margin:0 0 10px}
 .tbview select{width:auto}
 .qres{border-radius:6px;padding:10px 12px;font-size:13.5px;margin:6px 0}
+.srctier{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.02em;padding:1px 7px;border-radius:999px;vertical-align:middle;white-space:nowrap;margin-left:4px}
+.st-off{background:var(--pass-bg);color:var(--pass)}.st-law{background:var(--fgn);color:var(--fgnT)}.st-res{background:var(--warn-bg);color:var(--warn)}.st-pro{background:var(--sunk);color:var(--muted)}
+.srcfed{font-size:13.5px;margin:12px 0;padding:10px 12px;border-radius:8px;background:var(--sunk);line-height:1.55}
+.srch{margin:20px 0 4px;font-size:15px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}.srch .srctier{margin-left:0}
+.srctab td:first-child{min-width:170px}.srctab details summary{cursor:pointer}
+.srcsec{margin:6px 0;padding-left:18px;font-size:13.5px}.srcsec li{margin:3px 0}
 .sumv{display:flex;flex-direction:column;gap:2px;align-items:flex-start}
 .sumexec p{margin:0 0 10px;font-size:14.5px;line-height:1.55}.sumexec p:last-child{margin-bottom:0}
 .sumexec ol{margin:6px 0 0;padding-left:20px}.sumexec ol li{margin:4px 0;font-size:14px}
@@ -614,7 +620,7 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
   <!-- TAX RULES -->
   <section class="view" id="v-rules" style="--sec:var(--c-rules)" hidden>
     <h2>Tax rules</h2>
-    <p class="lead">Search every rule on this page, or browse the federal rule library below. The current REIT rules in one place: federal qualification requirements, rules by REIT type, state treatment and international regimes, with recent developments. The daily review keeps this up to date. <span id="rulesAsOf"></span></p>
+    <p class="lead">Search every rule on this page, or browse the federal rule library below. The current REIT rules in one place: federal qualification requirements, rules by REIT type, state treatment and international regimes, with recent developments. The daily review keeps this up to date. <a href="#updates" data-srcjump="1">See where the rules come from</a>. <span id="rulesAsOf"></span></p>
     <div class="panel rsearch" id="rulesSearchWrap">
       <form id="rulesQForm" role="search" class="rsform"><label for="rulesQ" class="sr">Search the tax rules</label><input type="search" id="rulesQ" placeholder="Search the tax rules: parking, TRS limit, 5/50, 857(b)(6), FIRPTA, Texas…" autocomplete="off"><button type="submit" class="primary">Search</button></form>
       <div class="rschips"><span class="why">Try:</span> <button type="button" data-rlq="rents from real property">Rents</button><button type="button" data-rlq="TRS">TRS</button><button type="button" data-rlq="prohibited transactions">Prohibited transactions</button><button type="button" data-rlq="distribution">Distributions</button><button type="button" data-rlq="asset test">Asset tests</button><button type="button" data-rlq="FIRPTA">FIRPTA</button><button type="button" data-rlq="relief">Failure relief</button><button type="button" data-rlq="One Big Beautiful Bill">2025 law changes</button></div>
@@ -833,6 +839,9 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
     <h2>Rule updates</h2>
     <p class="lead">The rule review runs every morning. It checks for new federal, state and international REIT rule changes, verifies existing rules against current sources, and adds coverage. Each day's review is logged below, even when nothing changed. Rule changes it finds are listed after the log, dated when the change was made, with links to their sources.</p>
     <div class="panel" id="reviewBox" style="margin-bottom:20px"></div>
+    <h3 class="qngrp" id="sources" style="margin-top:8px">Where the rules come from</h3>
+    <p class="lead">Every website the rules are taken from, graded by how authoritative it is. Federal rules come straight from the Internal Revenue Code and Treasury Regulations. State and international entries link to their source; official government sources are preferred, and an entry backed only by a secondary source is listed under "To confirm" until the review verifies it against the official one.</p>
+    <div class="panel" id="srcBox" style="margin-bottom:20px"></div>
     <h3 class="qngrp" style="margin-top:8px">Rule changes found</h3>
     <ul class="log" id="log"></ul>
   </section>
@@ -1392,7 +1401,7 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
 
   // ---------- Shared rule data ----------
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-  function link(u,t){return /^https:\/\//.test(u||"")?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(t||"Source")+'</a>':""}
+  function link(u,t){return /^https:\/\//.test(u||"")?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(t||"Source")+'</a>'+srcBadge(u):""}
   var TAG={strict:["t-strict","Captive REIT addback"],mod:["t-mod","Special rules"],conf:["t-conf","Follows federal"],pend:["t-pend","Needs verification"]};
   var states=[],regimes=[],changes=[];
 
@@ -1460,6 +1469,42 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
   $("v-states").addEventListener("click",function(e){if(e.target.id==="stateToggle"){stateMineTouched=true;$("stateMine").checked=!$("stateMine").checked;renderStates();}});
   $("v-global").addEventListener("click",function(e){if(e.target.id==="globalToggle"){globalMineTouched=true;$("globalMine").checked=!$("globalMine").checked;renderRegimes();}});
   var REVIEWS=[];
+  var AST_DOMAINS=["irs.gov", "treasury.gov", "law.cornell.edu", "ecfr.gov", "govinfo.gov", "uscode.house.gov", "federalregister.gov", "congress.gov", "sec.gov", "taxcourt.gov", "ftb.ca.gov", "cdtfa.ca.gov", "tax.ny.gov", "nyc.gov", "comptroller.texas.gov", "tax.illinois.gov", "floridarevenue.com", "mass.gov", "nj.gov", "revenue.pa.gov", "tax.virginia.gov", "ncdor.gov", "dor.georgia.gov", "marylandtaxes.gov", "revenue.state.mn.us", "revenue.wi.gov", "tax.colorado.gov", "azdor.gov", "portal.ct.gov", "canada.ca", "gov.uk", "ato.gov.au", "iras.gov.sg", "epra.com", "reit.com"];
+  // ---------- Where the rules come from: every source website, graded by how authoritative it is ----------
+  var SRC_TIERS=[["off","Official government and legislative sources","Primary law and guidance published by the government itself: the IRS, the SEC, state revenue departments and legislatures, and foreign tax authorities and legislatures. These are authoritative."],
+    ["law","Legal research publishers","Publishers that reproduce the text of statutes and regulations (Cornell LII, Justia, FindLaw) and professional tax news services (Thomson Reuters, Bloomberg Tax). Reliable copies and reports of the law, but not the official publication: check the government site for the current version."],
+    ["res","Research and industry organizations","Independent compilations, such as the Tax Foundation's annual state corporate rate tables and EPRA's global REIT survey. Useful and widely cited, but secondary: rates and rules are confirmed against the state or national authority."],
+    ["pro","Accounting and law firm commentary","Alerts and guides from accounting and law firms. Used to spot new developments early; the rule itself is confirmed against the statute, regulation or official notice before it is relied on."]];
+  var SRC_OFFICIAL_OTHER={"floridarevenue.com":1,"revenue.ie":1,"temi.camera.it":1,"elaw.klri.re.kr":1,"canada.ca":1,"legislation.gov.uk":1};
+  var SRC_LAW={"law.cornell.edu":1,"law.justia.com":1,"regulations.justia.com":1,"codes.findlaw.com":1,"colorado.public.law":1,"tax.thomsonreuters.com":1,"news.bloombergtax.com":1,"news.bloomberglaw.com":1,"casetext.com":1};
+  var SRC_RES={"taxfoundation.org":1,"epra.com":1,"reit.com":1,"cbre.com":1,"nareit.com":1,"oecd.org":1};
+  var SRC_NAMES={"taxfoundation.org":"Tax Foundation","epra.com":"EPRA (European Public Real Estate Association)","irs.gov":"Internal Revenue Service","sec.gov":"U.S. Securities and Exchange Commission","law.cornell.edu":"Cornell Law School, Legal Information Institute","law.justia.com":"Justia (statutes)","regulations.justia.com":"Justia (regulations)","codes.findlaw.com":"FindLaw (state codes)","tax.thomsonreuters.com":"Thomson Reuters Tax","news.bloombergtax.com":"Bloomberg Tax","news.bloomberglaw.com":"Bloomberg Law","revenue.ie":"Irish Revenue","temi.camera.it":"Italian Chamber of Deputies","elaw.klri.re.kr":"Korea Legislation Research Institute (official statute translations)","uaelegislation.gov.ae":"UAE Legislation (federal government)","conteudo.cvm.gov.br":"Brazil Securities Commission (CVM)","sars.gov.za":"South African Revenue Service","ird.govt.nz":"New Zealand Inland Revenue","floridarevenue.com":"Florida Department of Revenue","comptroller.texas.gov":"Texas Comptroller","tax.ny.gov":"New York Department of Taxation and Finance","ftb.ca.gov":"California Franchise Tax Board"};
+  function srcHost(u){var m=/^https?:\/\/([^\/?#]+)/i.exec(u||"");return m?m[1].toLowerCase().replace(/^www\./,""):"";}
+  function srcTier(h){if(!h)return "";if(/(^|\.)gov(\.[a-z]{2})?$|(^|\.)govt\.nz$|(^|\.)gc\.ca$|(^|\.)gov\.uk$|(^|\.)gouv\.fr$|(^|\.)admin\.ch$/.test(h)||SRC_OFFICIAL_OTHER[h])return "off";if(SRC_LAW[h])return "law";if(SRC_RES[h])return "res";return "pro";}
+  var SRC_LABEL={off:"Official",law:"Legal publisher",res:"Research",pro:"Firm commentary"};
+  function srcBadge(u){var t=srcTier(srcHost(u));return t?' <span class="srctier st-'+t+'" title="'+esc(SRC_TIERS.filter(function(x){return x[0]===t})[0][1])+'">'+SRC_LABEL[t]+'</span>':"";}
+  function srcUrls(o){var out=[];(function walk(v){if(typeof v==="string"){(v.match(/https:\/\/[^\s"'<>)]+/g)||[]).forEach(function(u){out.push(u)});}else if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==="object")Object.keys(v).forEach(function(k){walk(v[k])});})(o);return out.filter(function(u,i){return out.indexOf(u)===i});}
+  function srcRecords(){var R=[];
+    (states||[]).forEach(function(s){if(!s.missing)R.push({kind:"State",name:s.name||s.code,urls:srcUrls(s)});});
+    (regimes||[]).forEach(function(r){R.push({kind:"International",name:r.country,urls:srcUrls(r)});});
+    (changes||[]).forEach(function(c){R.push({kind:"Development",name:(c.jurisdiction?c.jurisdiction+": ":"")+(c.title||""),urls:srcUrls(c)});});
+    return R;}
+  function renderSources(){var el=$("srcBox");if(!el)return;var R=srcRecords(),H={};
+    R.forEach(function(r){r.tiers=r.urls.map(function(u){return srcTier(srcHost(u))});r.urls.forEach(function(u){var h=srcHost(u);if(!h)return;var e=H[h]||(H[h]={h:h,t:srcTier(h),uses:[],url:u});if(e.uses.indexOf(r.kind+": "+r.name)<0)e.uses.push(r.kind+": "+r.name);});});
+    var hosts=Object.keys(H).map(function(k){return H[k]}),cnt={off:0,law:0,res:0,pro:0};hosts.forEach(function(x){cnt[x.t]++});
+    var withOff=R.filter(function(r){return r.tiers.indexOf("off")>=0}).length,noSrc=R.filter(function(r){return !r.urls.length}),secOnly=R.filter(function(r){return r.urls.length&&r.tiers.indexOf("off")<0});
+    var pct=R.length?Math.round(withOff/R.length*100):0;
+    var h='<div class="chips"><div class="chip"><b>'+hosts.length+'</b><span>Source websites</span></div><div class="chip"><b class="good">'+cnt.off+'</b><span>Official government</span></div><div class="chip"><b>'+cnt.law+'</b><span>Legal publishers</span></div><div class="chip"><b>'+cnt.res+'</b><span>Research</span></div><div class="chip"><b>'+cnt.pro+'</b><span>Firm commentary</span></div><div class="chip"><b class="'+(pct>=75?"good":"")+'">'+pct+'%</b><span>Of state, international and update entries with an official source</span></div></div>';
+    h+='<div class="srcfed"><b>Federal REIT rules</b> (qualification tests, distribution rules, prohibited transactions, TRS rules, the rule library and the questionnaire guidance) are built into the app from the Internal Revenue Code, §§856–860 and §4981, and the Treasury Regulations, §§1.856-1 to 1.860-5, with the section cited next to each rule. The official text is at '+
+      '<a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section856&num=0&edition=prelim" target="_blank" rel="noopener">uscode.house.gov</a> (Office of the Law Revision Counsel), <a href="https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFR3b0da4fa9e3e2cb/section-1.856-1" target="_blank" rel="noopener">ecfr.gov</a> (Electronic Code of Federal Regulations) and <a href="https://www.irs.gov/" target="_blank" rel="noopener">irs.gov</a> (forms, instructions, notices and private letter rulings). <span class="srctier st-off">Official</span></div>';
+    h+='<div class="srcfed"><b>The REIT assistant</b> searches only these sites when it answers: '+(typeof AST_DOMAINS!=="undefined"?AST_DOMAINS:[]).map(function(d){return '<a href="https://'+esc(d)+'/" target="_blank" rel="noopener">'+esc(d)+'</a>'}).join(", ")+'.</div>';
+    SRC_TIERS.forEach(function(T){var L=hosts.filter(function(x){return x.t===T[0]}).sort(function(a,b){return b.uses.length-a.uses.length||(a.h<b.h?-1:1)});if(!L.length)return;
+      h+='<h4 class="srch"><span class="srctier st-'+T[0]+'">'+SRC_LABEL[T[0]]+'</span> '+esc(T[1])+' <span class="cite">'+L.length+' site'+(L.length>1?"s":"")+'</span></h4><p class="why">'+esc(T[2])+'</p>'+
+        '<div class="sumtw"><table class="sumtab srctab"><thead><tr><th>Website</th><th class="n">Entries</th><th>Used for</th></tr></thead><tbody>'+
+        L.map(function(x){return '<tr><td><a href="https://'+esc(x.h)+'/" target="_blank" rel="noopener">'+esc(x.h)+'</a>'+(SRC_NAMES[x.h]?'<div class="cite">'+esc(SRC_NAMES[x.h])+'</div>':'')+'</td><td class="n">'+x.uses.length+'</td><td>'+(x.uses.length>4?'<details><summary>'+esc(x.uses.slice(0,3).join("; "))+' and '+(x.uses.length-3)+' more</summary>'+esc(x.uses.join("; "))+'</details>':esc(x.uses.join("; ")))+'</td></tr>'}).join("")+'</tbody></table></div>';});
+    if(secOnly.length)h+='<h4 class="srch"><span class="srctier st-res">To confirm</span> Entries without an official source yet <span class="cite">'+secOnly.length+'</span></h4><p class="why">These entries rely only on publishers, research or firm commentary. Confirm them against the statute, regulation or official notice before relying on them. The daily review adds the official source as it verifies each one.</p><ul class="srcsec">'+secOnly.map(function(r){return '<li><b>'+esc(r.kind)+':</b> '+esc(r.name)+' <span class="cite">'+r.urls.map(srcHost).filter(function(x,i,a){return a.indexOf(x)===i}).map(esc).join(", ")+'</span></li>'}).join("")+'</ul>';
+    if(noSrc.length)h+='<p class="why">No source link yet: '+noSrc.map(function(r){return esc(r.kind+": "+r.name)}).join("; ")+'.</p>';
+    el.innerHTML=h;}
   function renderReviews(){var el=$("reviewBox");if(!el)return;var M=META||{},R=REVIEWS.slice().sort(function(a,b){return (b.date||"")<(a.date||"")?-1:1}),last=R[0];
     var today=new Date(),iso=today.getFullYear()+"-"+String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
     var stale=M.lastChecked&&/^\d{4}-\d{2}-\d{2}$/.test(M.lastChecked)&&(new Date(iso)-new Date(M.lastChecked))/864e5>2;
@@ -1470,7 +1515,7 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
       (R.length?'<ul class="log" style="margin-top:14px">'+R.slice(0,14).map(function(r){return '<li><time>'+esc(r.date)+'</time><h4>'+(r.reconstructed?'<span class="tag t-pend">Reconstructed</span> ':r.changesFound?'<span class="tag t-acc">'+r.changesFound+' new change'+(r.changesFound>1?'s':'')+'</span> ':'<span class="tag t-pend">No new changes</span> ')+esc(r.title||"Daily rule review")+'</h4>'+(r.summary?'<p>'+esc(r.summary)+'</p>':'')+
           ((r.verified||[]).length?'<p class="why" style="margin:4px 0 0"><b>Checked against current sources:</b></p><ul class="wi">'+list(r.verified)+'</ul>':'')+((r.added||[]).length?'<p class="why" style="margin:4px 0 0"><b>Added:</b></p><ul class="wi">'+list(r.added)+'</ul>':'')+((r.changed||[]).length?'<p class="why" style="margin:4px 0 0"><b>Rule changes recorded:</b></p><ul class="wi">'+list(r.changed)+'</ul>':'')+((r.attention||[]).length?'<p class="why" style="margin:4px 0 0"><b>Needs a tax professional\'s attention:</b></p><ul class="wi">'+list(r.attention)+'</ul>':'')+'</li>'}).join("")+'</ul>'
         :'<p class="why" style="margin:12px 0 0">'+(M.lastChecked?'The review ran on '+esc(M.lastChecked)+'. Starting with the next review, each day\'s results (what was checked, verified and added) are logged here.':'The first review hasn\'t run yet.')+'</p>');}
-  function renderLog(){renderReviews();
+  function renderLog(){renderReviews();renderSources();
     var el=$("log");
     if(!changes.length){el.innerHTML='<li><h4>No updates recorded yet</h4><p>The scheduled review adds an entry here each time it finds a rule change.</p></li>';return;}
     el.innerHTML=changes.slice().sort(function(a,b){return (b.date||"")<(a.date||"")?-1:1}).map(function(c){
@@ -3838,6 +3883,7 @@ body{background:linear-gradient(180deg,#F3F6FD 0,var(--bg) 320px) no-repeat,var(
   $("stRptPdf").addEventListener("click",function(){withScope(ST_SCOPE[0],ST_SCOPE[1],ST_SCOPE[2],function(){return rptDownloadPdf($("stRptNote"));});});
   $("stRptXlsx").addEventListener("click",function(){withScope(ST_SCOPE[0],ST_SCOPE[1],ST_SCOPE[2],function(){return rptDownloadXlsx($("stRptNote"));});});
 
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-srcjump]");if(!a)return;e.preventDefault();location.hash="updates";setTimeout(function(){var t=$("sources");if(t)t.scrollIntoView({behavior:"smooth",block:"start"});},80);});
   // ---------- Results summary: executive summary, and how to resolve each failure ----------
   var SUM_AREAS=[["org","Organization and ownership",["Organizational requirements","100-shareholder test","5/50 closely held test"]],
     ["inc","Gross income tests",["75% gross income test","95% gross income test","1% impermissible services rule"]],
