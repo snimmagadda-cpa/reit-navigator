@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-15",
-   "nextCheck": "2026-11-16"
+   "lastChecked": "2026-11-16",
+   "nextCheck": "2026-11-17"
   }
  },
  "federal": {
@@ -739,31 +739,33 @@
    "exemption": 0,
    "forms": [
     {
-     "due": "15th day of the 4th month after year end (April 15 for calendar-year filers)",
+     "due": "15th day of the 4th month after year end (April 15 for calendar-year filers); next business day if it falls on a weekend or holiday",
      "form": "Form 41",
-     "name": "Idaho Corporation Income Tax Return"
+     "name": "Idaho Corporation Income Tax Return",
+     "note": "REITs must file; attach Forms 42, 44 and 75 as applicable and a complete copy of the federal return"
     },
     {
      "form": "Form 41ES / 41EST",
      "name": "Corporate Estimated Tax payment vouchers and summary",
-     "note": "Required if the corporation must make federal estimates and expects Idaho tax of $500 or more; due the 15th day of the 4th, 6th, 9th and 12th months"
+     "note": "Not required in the first year in Idaho; afterwards required if the corporation must make federal estimates and expects Idaho tax of $500 or more; due the 15th day of the 4th, 6th, 9th and 12th months"
     },
     {
      "form": "Form 41ESR",
-     "name": "Estimated Tax Payments / Underpayment calculation for corporations"
+     "name": "Estimated Tax Payments / Underpayment calculation for corporations",
+     "note": "Attach to Form 41 if estimates were underpaid"
     }
    ],
-   "formsVerified": false,
-   "lastVerified": "2026-11-13",
+   "formsVerified": true,
+   "lastVerified": "2026-11-16",
    "minTax": 20,
    "name": "Idaho",
    "rate": 5.3,
    "rateNote": "Flat 5.3% of Idaho taxable income (cut from 5.695% by H.B. 40, retroactive to Jan 1, 2025; no further change found for 2026). $20 minimum tax per corporation plus a $10 permanent building fund tax.",
    "rateSource": "https://tax.idaho.gov/document-mngr/forms_ein00035",
    "rateYear": 2026,
-   "sourceName": "Idaho State Tax Commission, 2025 Form 41",
-   "sourceUrl": "https://tax.idaho.gov/document-mngr/forms_efo00025",
-   "summary": "Idaho's corporate income tax (Form 41) starts from federal taxable income, so a REIT's federal dividends-paid deduction appears to carry through to Idaho. Neither the 2025 Form 41 nor the estimated tax summary mentions REITs or a captive REIT addback; this has not been confirmed against the statute or explicit guidance.",
+   "sourceName": "Idaho State Tax Commission, Income tax for corporations guide",
+   "sourceUrl": "https://tax.idaho.gov/taxes/income-tax/business-income/guides-for-certain-businesses/income-tax-for-corporations/",
+   "summary": "The Idaho State Tax Commission lists REITs among the corporations that must file the Idaho business income tax return (Form 41). Neither Idaho Code §63-3022 nor the 2025 Form 41 materials mention REITs, the dividends-paid deduction or a captive REIT addback, so the federal dividends-paid deduction appears to carry through; this has not been confirmed by explicit guidance.",
    "treatment": "conf",
    "verified": false,
    "wholeIncome": true
@@ -997,20 +999,107 @@
    "forms": [
     {
      "form": "Form 500",
-     "name": "Corporation Income Tax Return"
+     "name": "Corporation Income Tax Return",
+     "note": "Line 7e adds back the dividends-paid deduction claimed by a captive REIT"
+    },
+    {
+     "form": "Form 500D",
+     "name": "Declaration of Estimated Corporation Income Tax",
+     "note": "Estimated tax payments are reported on Form 500 line 15a"
+    },
+    {
+     "form": "Form 500E",
+     "name": "Application for Extension of Time to File Corporation Income Tax Return",
+     "note": "Tax paid with the extension request is reported on Form 500 line 15b"
+    },
+    {
+     "form": "Form 500UP",
+     "name": "Underpayment of Estimated Income Tax by Corporations",
+     "note": "Interest and penalties carried to Form 500 line 18"
     }
    ],
-   "formsVerified": false,
-   "lastVerified": "2026-10-28",
+   "formsVerified": true,
+   "lastVerified": "2026-11-16",
    "name": "Maryland",
    "rate": 8.25,
+   "rateNote": "Flat 8.25% (2025 Form 500 line 14).",
    "rateSource": "https://taxfoundation.org/data/all/state/state-corporate-income-tax-rates-brackets/",
    "rateYear": 2026,
-   "sourceName": "PwC tax insight",
-   "sourceUrl": "https://pwc.com/us/en/services/tax/library/maryland-law-provides-beneficial-rules-for-certain-captive-reits.html",
+   "sourceName": "Comptroller of Maryland, 2025 Form 500",
+   "sourceUrl": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/forms/2025/500.pdf",
    "summary": "Disallows the dividends-paid deduction for captive REITs. Later legislation (SB 968) widened the entities excluded from the captive REIT definition, so qualifying entities avoid the addback.",
    "treatment": "strict",
    "verified": true
+  },
+  "ME": {
+   "brackets": [
+    {
+     "over": 0,
+     "rate": 3.5
+    },
+    {
+     "over": 350000,
+     "rate": 7.93
+    },
+    {
+     "over": 1050000,
+     "rate": 8.33
+    },
+    {
+     "over": 3500000,
+     "rate": 8.93
+    }
+   ],
+   "captive": "No captive REIT addback found in 36 M.R.S. §5200-A or Rule 810.",
+   "citation": "36 M.R.S. §§5200, 5200-A; 18-125 C.M.R. ch. 810",
+   "code": "ME",
+   "exemption": 0,
+   "forms": [
+    {
+     "form": "1120ME",
+     "name": "Corporate Income Tax Return (with Schedule A)"
+    },
+    {
+     "form": "Schedule 1A / 1S",
+     "name": "Income Addition and Subtraction Modifications"
+    },
+    {
+     "form": "Form CR",
+     "name": "Combined Report for Unitary Members",
+     "note": "Unitary groups"
+    },
+    {
+     "due": "15th day of the 4th, 6th, 9th and 12th months (April 15, June 15, Sept 15, Dec 15 for calendar-year filers)",
+     "form": "1120ES-ME",
+     "name": "Vouchers for Estimated Tax Payments",
+     "note": "Waived if current- or prior-year liability after credits is under $1,000"
+    },
+    {
+     "form": "1120W-ME",
+     "name": "Worksheet for Calculating Estimated Tax Payments"
+    },
+    {
+     "form": "2220ME",
+     "name": "Underpayment of Estimated Tax by Corporations or Financial Institutions"
+    },
+    {
+     "form": "1120EXT-ME",
+     "name": "Extension Payment Voucher"
+    }
+   ],
+   "formsVerified": true,
+   "lastVerified": "2026-11-16",
+   "name": "Maine",
+   "rate": 8.93,
+   "rateNote": "2026 schedule: 3.5% up to $350,000; 7.93% to $1,050,000; 8.33% to $3,500,000; 8.93% above, applied to adjusted federal taxable income and then multiplied by the Maine apportionment factor (2026 Form 1120W-ME). Any minimum or alternative tax is not modeled.",
+   "rateSource": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_1120w.pdf",
+   "rateYear": 2026,
+   "sourceName": "Maine Legislature, 36 M.R.S. §5200-A",
+   "sourceUrl": "https://www.legislature.maine.gov/statutes/36/title36sec5200-A.html",
+   "summary": "Maine's corporate income tax starts from federal taxable income with the modifications in 36 M.R.S. §5200-A, which contain no REIT, dividends-paid deduction or captive REIT provision, so a REIT's federal dividends-paid deduction appears to carry through. Maine uses water's-edge combined reporting for unitary groups (Rule 810); how REITs are treated in a combined report is not addressed and has not been confirmed.",
+   "treatment": "conf",
+   "verified": false,
+   "wholeIncome": false
   },
   "MI": {
    "captive": "No captive REIT addback found in MCL 206.623 or the Form 4891 instructions; not otherwise confirmed.",
@@ -2852,6 +2941,27 @@
     "Oklahoma: captive REIT treatment corrected (captive REITs add back the dividends-paid deduction; payor rent/interest addback applies otherwise) and estimated form corrected to OW-8-ESC, confirmed against the 2025 Form 512 instructions",
     "Arkansas: captive REIT definition and dividends-paid deduction addback confirmed against Ark. Code Ann. 26-51-440",
     "Tennessee: FAE 174 and the Schedule J line 14 captive REIT addback confirmed against the 2025 FAE 174 instructions"
+   ]
+  },
+  "2026-11-16": {
+   "added": [
+    "Maine state rules"
+   ],
+   "attention": [
+    "Colorado: Amendment 87 still not officially certified; once it is, 2027 Colorado estimates for REITs and TRSs with Colorado income above $500,000 will rise (top rate 8.4%). The page still uses 4.4%.",
+    "Hawaii: status of SB 592 (disallowing the REIT dividends-paid deduction from 2026) could not be confirmed on the Legislature's site; no Act number found, so Hawaii stays unverified.",
+    "Idaho, Kansas and Maine: REIT treatment rests on the absence of any REIT provision in the statutes and returns; left unverified.",
+    "Pennsylvania: only Form RCT-101 could be confirmed on the Department of Revenue site; estimated payment and extension forms remain unverified.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this session), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-16",
+   "summary": "Checked federal (IRS rulings, notices, forms), state and international REIT sources since Nov 15; no new enacted REIT rule changes found. Colorado Amendment 87 is still awaiting official certification and the UK Autumn Budget REIT items were already recorded.",
+   "title": "Daily rule review",
+   "verified": [
+    "Maryland: Forms 500, 500D, 500E and 500UP, the 8.25% rate and the captive REIT dividends-paid deduction addback (Form 500 line 7e) confirmed against the 2025 Form 500",
+    "Idaho: Form 41 filing requirement for REITs, due date and estimated tax rules (Forms 41ES and 41ESR) confirmed against the Idaho State Tax Commission corporate income tax guide"
    ]
   }
  }
