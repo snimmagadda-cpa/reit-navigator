@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-17",
-   "nextCheck": "2026-11-18"
+   "lastChecked": "2026-11-18",
+   "nextCheck": "2026-11-19"
   }
  },
  "federal": {
@@ -682,7 +682,7 @@
    "rateYear": 2026,
    "sourceName": "Hawaii Legislature, SB 2362 SD1 (2026)",
    "sourceUrl": "https://data.capitol.hawaii.gov/sessions/session2026/Bills/SB2362_SD1_.HTM",
-   "summary": "Has allowed the REIT dividends-paid deduction, but bills to repeal it for REITs have been introduced repeatedly. In 2026, SB 2362 was amended into a study of disallowing the deduction and passed the Senate but was not enacted, and SB 592 (disallowance from 2026) was carried over; no enactment identified as of Nov 2026. Confirm current status before relying on it.",
+   "summary": "HRS §235-71(d) computes a REIT's taxable income under IRC §§857 and 858 and limits the dividends-paid deduction to dividends attributable to income taxable in Hawaii. Bills to repeal the deduction for REITs failed again in 2026: SB 2362 (amended into a study) passed the Senate but stalled in the House, and SB 592 was not enacted; both are listed as failed after the 2025–2026 biennium ended. Confirm the attributable-income limit's current wording before relying on it.",
    "treatment": "conf",
    "verified": false
   },
@@ -1656,6 +1656,49 @@
    "summary": "A captive REIT files Form RI-1120C, adds its total dividends-paid deduction back to federal taxable income, and pays tax at the 7% corporate rate (minimum $400). A non-captive REIT does not file RI-1120C; it checks the 1120F box and files Form RI-1120F, per the Division of Taxation's instructions.",
    "treatment": "strict",
    "verified": true
+  },
+  "SC": {
+   "captive": "No captive REIT addback found in S.C. Code §12-6-50 or the 2025 SC1120 instructions; not otherwise confirmed.",
+   "citation": "S.C. Code §§12-6-50, 12-6-530, 12-20-50, 12-20-110; SCDOR Rev. Rul. 05-11",
+   "code": "SC",
+   "exemption": 0,
+   "forms": [
+    {
+     "due": "15th day of the 4th month after year end (April 15 for calendar-year filers)",
+     "form": "SC1120",
+     "name": "C Corporation Income Tax Return",
+     "note": "Includes the corporate license fee ($15 plus $1 per $1,000 of capital and paid-in surplus, $25 minimum); trust-form REITs taxed under IRC §857 are exempt from the fee, corporate-form REITs are not"
+    },
+    {
+     "form": "SC1120-T",
+     "name": "Application for Extension of Time to File",
+     "note": "No extension to pay; file and pay any balance by the original due date. With no balance due, a federal extension is accepted if the return is filed within the federal extended period"
+    },
+    {
+     "due": "15th day of the 4th, 6th, 9th and 12th months",
+     "form": "SC1120-CDP",
+     "name": "Corporation Declaration of Estimated Income Tax",
+     "note": "Required when estimated tax is $100 or more"
+    },
+    {
+     "form": "SC2220",
+     "name": "Underpayment of Estimated Tax by Corporations"
+    }
+   ],
+   "formsVerified": true,
+   "lastVerified": "2026-11-18",
+   "minTax": 0,
+   "name": "South Carolina",
+   "rate": 5,
+   "rateNote": "Flat 5% of South Carolina taxable income (S.C. Code §12-6-530). The separate corporate license fee ($15 plus 0.1% of capital and paid-in surplus, $25 minimum; trust-form REITs exempt) is not modeled.",
+   "rateSource": "https://www.scstatehouse.gov/code/t12c006.php",
+   "rateYear": 2026,
+   "sourceName": "SCDOR, Instructions for C and S Corporation Income Tax Returns (June 2025)",
+   "sourceUrl": "https://dor.sc.gov/forms-site/Forms/SC1120I.pdf",
+   "summary": "South Carolina starts from federal taxable income and adopts the Internal Revenue Code with listed exceptions in S.C. Code §12-6-50; IRC §§856–860 are not on that list, so a REIT's federal dividends-paid deduction appears to carry through. REITs organized as trusts and taxed under IRC §857 are exempt from the annual corporate license fee, but REITs organized as corporations pay it (2025 SC1120 instructions; Rev. Rul. 05-11). No REIT-specific statute or captive REIT addback was found; this has not been confirmed by explicit guidance.",
+   "treatment": "conf",
+   "verified": false,
+   "wholeIncome": true
   },
   "TN": {
    "captive": "Captive REIT: REIT election in effect, at least 80% owned by value (GAAP) directly or indirectly by another entity or individual, shares not traded on a national stock exchange (Tenn. Code Ann. §67-4-2004(7)). Dividends-paid deduction added back on Schedule J, line 14 under §67-4-2006(b)(1)(O) unless owned by a bank, bank holding company or public REIT. Captive REITs may elect three-factor apportionment for franchise tax.",
@@ -3042,6 +3085,27 @@
    "verified": [
     "Michigan: Forms 4891, 4913, 4, 4897 and 4899, the $350,000 gross receipts / $100 liability filing threshold, due dates and the $800 estimated payment rule confirmed against Michigan Treasury's 2025 CIT forms page, CIT filing requirements and the 2025 Form 4891 instructions (REIT treatment still unconfirmed)",
     "Indiana: IT-20 due dates and extension rule (DOR Bulletin GB #303) and IT-6/E-6 estimated payment rules (DOR Income Tax Information Bulletin #11) confirmed"
+   ]
+  },
+  "2026-11-18": {
+   "added": [
+    "South Carolina state rules"
+   ],
+   "attention": [
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) still not confirmed as officially certified; the page still uses 4.4%.",
+    "Hawaii: REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income under HRS §235-71(d); the page models Hawaii as conforming.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed (Department of Revenue form links redirect)."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-18",
+   "summary": "Checked federal (IRS letter rulings, notices, Form 1120-REIT materials), state and international REIT sources since Nov 17; no new enacted REIT rule changes found. Colorado Amendment 87 still has no official certification found.",
+   "title": "Daily rule review",
+   "verified": [
+    "Hawaii: SB 2362 and SB 592 (REIT dividends-paid deduction repeal) confirmed as failed after the 2026 session; summary updated to note HRS §235-71(d)'s attributable-income limit (left unverified pending the statute's current wording)",
+    "Kansas: 2024 corporate booklet confirms no REIT modification and 3.5% normal tax plus 3% surtax; REIT treatment in combined reports still unconfirmed",
+    "Pennsylvania: 2026 CNIT rate (7.49%) and e-filed RCT-101 confirmed on the PA Department of Revenue site; estimated payment and extension forms still unconfirmed",
+    "Alaska: current Form 6000 instructions could not be retrieved; still unverified"
    ]
   }
  }
