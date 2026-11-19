@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-18",
-   "nextCheck": "2026-11-19"
+   "lastChecked": "2026-11-19",
+   "nextCheck": "2026-11-20"
   }
  },
  "federal": {
@@ -1352,6 +1352,82 @@
    "summary": "REIT income is taxed in accordance with the Code unless the REIT is captive. A captive REIT adds its dividends-paid deduction back to federal taxable income.",
    "treatment": "strict",
    "verified": true
+  },
+  "ND": {
+   "brackets": [
+    {
+     "over": 0,
+     "rate": 1.41
+    },
+    {
+     "over": 25000,
+     "rate": 3.55
+    },
+    {
+     "over": 50000,
+     "rate": 4.31
+    }
+   ],
+   "captive": "Captive REIT: not regularly traded and more than 50% of voting power or value owned or controlled by a single entity that is not exempt under IRC 501(a). Non-captive REITs, listed Australian property trusts and qualified foreign entities are carved out of the owner test; a REIT intended to be traded must be regularly traded within one year or is treated as captive from the start (constructive ownership under IRC 318 as modified by 856(d)(5)).",
+   "citation": "N.D.C.C. 57-38-01.3(1)(l); N.D.C.C. 57-38-30",
+   "code": "ND",
+   "exemption": 0,
+   "forms": [
+    {
+     "due": "April 15 for calendar-year filers (15th day of the 4th month after year end); a federal extension is accepted and adds one month beyond the federal extended date (Nov 15 for calendar-year filers)",
+     "form": "Form 40",
+     "name": "North Dakota Corporation Income Tax Return",
+     "note": "Attach at least the first 6 pages of federal Form 1120 (or 1120-REIT) and relevant schedules"
+    },
+    {
+     "captiveOnly": true,
+     "form": "Schedule SA",
+     "name": "Additions and Subtractions",
+     "note": "Captive REIT dividends-paid deduction addback goes on line 6 (other additions)"
+    },
+    {
+     "form": "Schedule FACT",
+     "name": "Apportionment Factors"
+    },
+    {
+     "form": "Form 40-ES",
+     "name": "Corporation Estimated Income Tax",
+     "note": "Required if both the current-year expected liability and the prior-year liability exceed $5,000; calendar-year installments due April 15, June 15, Sept 15 and Jan 15"
+    },
+    {
+     "form": "Form 40-EXT",
+     "name": "Extension Payment Voucher",
+     "note": "An extension does not extend time to pay"
+    },
+    {
+     "form": "Form 101",
+     "name": "Application for Extension of Time to File",
+     "note": "Only if no federal extension was obtained"
+    },
+    {
+     "form": "Form 40-UT",
+     "name": "Underpayment of Estimated Income Tax"
+    },
+    {
+     "form": "Schedule WE",
+     "name": "Water's Edge Election",
+     "note": "Binding for five years; adds a 3.5% surtax"
+    }
+   ],
+   "formsVerified": true,
+   "lastVerified": "2026-11-19",
+   "minTax": 0,
+   "name": "North Dakota",
+   "rate": 4.31,
+   "rateNote": "Graduated rates of 1.41% up to $25,000, 3.55% from $25,000 to $50,000 and 4.31% over $50,000, unchanged since 2015. Water's edge filers owe an extra 3.5% surtax (not modeled). No minimum tax.",
+   "rateSource": "https://www.tax.nd.gov/business/corporate-income-tax",
+   "rateYear": 2026,
+   "sourceName": "North Dakota Office of State Tax Commissioner, 2025 Corporation Income Tax Instructions",
+   "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/forms/software-developer/corp-forms/2025-corp-income-tax-instructions.pdf",
+   "summary": "North Dakota taxable income starts from federal taxable income, so an ordinary REIT keeps its federal dividends-paid deduction. A captive REIT (not publicly traded and more than 50% owned by a single taxable entity) must add back its dividends-paid deduction under N.D.C.C. 57-38-01.3(1)(l), reported on Schedule SA as an other addition to the extent not already included in apportionable income.",
+   "treatment": "strict",
+   "verified": true,
+   "wholeIncome": false
   },
   "NE": {
    "captive": "No captive REIT addback found in the 2025 Nebraska corporation booklet; not otherwise confirmed.",
@@ -2765,6 +2841,16 @@
    "summary": "The Autumn Budget 2026 proposes ending sovereign immunity for UK real estate from 1 January 2029. Sovereigns would remain institutional investors for UK REIT purposes, the holder-of-excessive-rights rules would aggregate their connected vehicles, and an optional UK sovereign REIT holding company would pay 15% on gross PIDs. Consultation closes 20 January 2027; legislation expected in Finance Bill 2027-28.",
    "title": "Sovereign investor tax status and sovereign REIT holding company (consultation)"
   },
+  "2026-11-13-us-plr-trs-election-extensions": {
+   "date": "2026-11-13",
+   "effective": "Letters dated Aug 17 and Aug 18, 2026, released Nov 13, 2026; binding only on the taxpayers",
+   "jurisdiction": "United States",
+   "sourceName": "IRS, PLR 202646007 (see also PLR 202646008)",
+   "sourceUrl": "https://www.irs.gov/pub/irs-wd/202646007.pdf",
+   "status": "ruling",
+   "summary": "In two letters released Nov 13, 2026, the IRS gave hotel REITs 90 days to file late Form 8875 elections so that restaurant-sublessee subsidiaries are treated as TRSs from the intended date, after a sponsor's tax director never filed them. The rulings address only the timing of the elections, not REIT or TRS qualification, and bind only the taxpayers.",
+   "title": "PLRs 202646007 and 202646008: 9100 relief for late TRS elections in hotel REIT structures"
+  },
   "2026-11-15-co-amendment-87": {
    "date": "2026-11-15",
    "effective": "Tax years beginning on or after January 1, 2027 (once certified)",
@@ -3106,6 +3192,30 @@
     "Kansas: 2024 corporate booklet confirms no REIT modification and 3.5% normal tax plus 3% surtax; REIT treatment in combined reports still unconfirmed",
     "Pennsylvania: 2026 CNIT rate (7.49%) and e-filed RCT-101 confirmed on the PA Department of Revenue site; estimated payment and extension forms still unconfirmed",
     "Alaska: current Form 6000 instructions could not be retrieved; still unverified"
+   ]
+  },
+  "2026-11-19": {
+   "added": [
+    "North Dakota state rules"
+   ],
+   "attention": [
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) is reported as passed but no official certification was found yet; the page still uses 4.4%.",
+    "Hawaii: REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income under HRS 235-71(d); the page models Hawaii as conforming.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [
+    "PLRs 202646007 and 202646008: late TRS elections allowed for hotel REIT restaurant sublessees (IRS, https://www.irs.gov/pub/irs-wd/202646007.pdf)"
+   ],
+   "changesFound": 1,
+   "date": "2026-11-19",
+   "summary": "Checked federal (IRS letter rulings released Nov 13, notices), state (KPMG This Week in State Tax Nov 16, Colorado results) and international REIT sources since Nov 18. Found two new IRS letter rulings granting late TRS elections; no enacted state or international REIT rule changes.",
+   "title": "Daily rule review",
+   "verified": [
+    "North Dakota: captive REIT addback, rates, forms and due dates confirmed against N.D.C.C. 57-38-01.3(1)(l), the 2025 Corporation Income Tax Instructions and the Tax Commissioner's corporate income tax pages",
+    "Kansas: KDOR Notice 26-11 (Oct 15, 2026) re-confirmed no revenue-trigger rate cut for 2027; REIT treatment in combined reports still unconfirmed",
+    "Montana: MCA 15-31-406 checked; no REIT provision found, so REIT treatment remains unconfirmed",
+    "Pennsylvania: estimated payment and extension form links (REV-853, REV-857) still redirect on the Department of Revenue site; forms remain unverified"
    ]
   }
  }
