@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-19",
-   "nextCheck": "2026-11-20"
+   "lastChecked": "2026-11-20",
+   "nextCheck": "2026-11-21"
   }
  },
  "federal": {
@@ -1209,21 +1209,26 @@
      "form": "MO-1120ES",
      "name": "Declaration of Estimated Tax for Corporations",
      "note": "Required if Missouri estimated tax is expected to be at least $250 (RSMo §143.521)"
+    },
+    {
+     "form": "MO-7004",
+     "name": "Application for Extension of Time to File",
+     "note": "File only if a balance is expected to be due; a federal extension (Form 7004) otherwise extends the Missouri filing date automatically, but never the time to pay"
     }
    ],
    "formsVerified": true,
-   "lastVerified": "2026-11-08",
+   "lastVerified": "2026-11-20",
    "minTax": 0,
    "name": "Missouri",
    "rate": 4,
    "rateNote": "Flat 4% of Missouri taxable income for tax years beginning on or after January 1, 2020 (RSMo §143.071.3). Missouri's federal income tax deduction (§143.171) is not modeled here.",
    "rateSource": "https://revisor.mo.gov/main/OneSection.aspx?section=143.071",
    "rateYear": 2026,
-   "sourceName": "Missouri DOR, 2025 Form MO-1120 Instructions; RSMo §143.431",
+   "sourceName": "Missouri DOR, 2025 Form MO-1120 Instructions; RSMo §143.431 (Missouri Revisor of Statutes)",
    "sourceUrl": "https://dor.mo.gov/forms/MO-1120%20Instructions_2025.pdf",
-   "summary": "Missouri taxable income starts from federal taxable income with the modifications in RSMo §143.431, and REITs compute on Form MO-1120 using their attached Form 1120-REIT. No REIT- or captive-REIT-specific addback was found in §143.431 or the 2025 MO-1120 instructions, so the federal dividends-paid deduction appears to flow through; this has not been confirmed by explicit guidance.",
+   "summary": "Missouri taxable income starts from federal taxable income with the modifications in RSMo §143.431, and the 2025 MO-1120 instructions tell REITs to attach Form 1120-REIT and carry its taxable income (already reduced by the dividends-paid deduction) to Form MO-1120. Neither §143.431 nor the instructions contain any REIT or captive REIT addback, so the federal dividends-paid deduction carries through. On the shareholder side, the Department of Revenue has denied corporate recipients a Missouri dividend subtraction for REIT dividends since the 2021 instructions, but the Administrative Hearing Commission allowed the subtraction for a bank receiving Missouri REIT distributions (reported by KPMG, Feb 2024).",
    "treatment": "conf",
-   "verified": false,
+   "verified": true,
    "wholeIncome": true
   },
   "MS": {
@@ -1533,6 +1538,45 @@
    "verified": true,
    "wholeIncome": true
   },
+  "NM": {
+   "captive": "Captive REIT: a REIT taxed under IRC §857 whose shares or beneficial interests are not regularly traded on an established securities market and of which more than 50% of any class is owned directly, indirectly or constructively by the taxpayer. Captive REITs are included in the owner's unitary group, and deductions for expenses paid, accrued or incurred to a captive REIT are added back to base income (effective for tax years beginning on or after Jan 1, 2020, Laws 2019 H.B. 6).",
+   "citation": "NMSA 1978 §§7-2A-2(C)(1)(b), (D), (Q), (AA); 7-2A-5; 7-2A-8.3; Laws 2019, ch. 270 (H.B. 6); Laws 2024, ch. 67 (H.B. 252)",
+   "code": "NM",
+   "exemption": 0,
+   "forms": [
+    {
+     "due": "On or before the federal return due date (15th day of the 4th month after year end); electronic filers who also pay electronically have until the last day of that month",
+     "form": "CIT-1",
+     "name": "New Mexico Corporate Income and Franchise Tax Return",
+     "note": "Also reports the $50 annual franchise tax"
+    },
+    {
+     "due": "15th day of the 4th, 6th, 9th and 12th months",
+     "form": "CIT-ES",
+     "name": "Corporate Income Tax Estimated Payment Voucher",
+     "note": "Required if the year's liability after credits is $5,000 or more"
+    },
+    {
+     "form": "CIT-EXT",
+     "name": "Corporate Income Tax Extension Payment Voucher",
+     "note": "New Mexico honors a federal extension to file; interest runs from the original due date"
+    }
+   ],
+   "formsVerified": false,
+   "lastVerified": "2026-11-20",
+   "minTax": 0,
+   "name": "New Mexico",
+   "rate": 5.9,
+   "rateNote": "Flat 5.9% of New Mexico taxable income for tax years beginning on or after Jan 1, 2025 (NMSA §7-2A-5 as amended by H.B. 252, 2024); previously 4.8% on the first $500,000 and 5.9% above. The separate $50 annual franchise tax is not modeled.",
+   "rateSource": "https://law.justia.com/codes/new-mexico/chapter-7/article-2a/section-7-2a-5",
+   "rateYear": 2026,
+   "sourceName": "New Mexico Statutes §7-2A-2 (2025, Justia); NM Taxation and Revenue Department, Corporate Income & Franchise Tax overview",
+   "sourceUrl": "https://law.justia.com/codes/new-mexico/chapter-7/article-2a/section-7-2a-2/",
+   "summary": "New Mexico taxes corporations on federal taxable income with state adjustments. Since tax years beginning in 2020, a captive REIT (shares not regularly traded and more than 50% owned by the taxpayer) is included in its owner's unitary group, while REITs that are not captive are excluded from unitary groups. A taxpayer must also add back any deduction it took for expenses paid or accrued to a captive REIT. A non-captive REIT filing on its own computes New Mexico income from its federal REIT taxable income, so the dividends-paid deduction carries through.",
+   "treatment": "strict",
+   "verified": true,
+   "wholeIncome": true
+  },
   "NY": {
    "brackets": [
     {
@@ -1762,7 +1806,7 @@
     }
    ],
    "formsVerified": true,
-   "lastVerified": "2026-11-18",
+   "lastVerified": "2026-11-20",
    "minTax": 0,
    "name": "South Carolina",
    "rate": 5,
@@ -1771,7 +1815,7 @@
    "rateYear": 2026,
    "sourceName": "SCDOR, Instructions for C and S Corporation Income Tax Returns (June 2025)",
    "sourceUrl": "https://dor.sc.gov/forms-site/Forms/SC1120I.pdf",
-   "summary": "South Carolina starts from federal taxable income and adopts the Internal Revenue Code with listed exceptions in S.C. Code §12-6-50; IRC §§856–860 are not on that list, so a REIT's federal dividends-paid deduction appears to carry through. REITs organized as trusts and taxed under IRC §857 are exempt from the annual corporate license fee, but REITs organized as corporations pay it (2025 SC1120 instructions; Rev. Rul. 05-11). No REIT-specific statute or captive REIT addback was found; this has not been confirmed by explicit guidance.",
+   "summary": "South Carolina starts from federal taxable income and adopts the Internal Revenue Code with the exceptions listed in S.C. Code §12-6-50. IRC §§856–860 are not on that list, but the excluded range IRC §§531–564 includes §561, the section that defines the dividends-paid deduction a REIT uses under §857, so whether a REIT's federal dividends-paid deduction fully carries through is not confirmed by explicit guidance. REITs organized as trusts and taxed under IRC §857 are exempt from the annual corporate license fee, but REITs organized as corporations pay it (2025 SC1120 instructions; Rev. Rul. 05-11). No captive REIT addback was found.",
    "treatment": "conf",
    "verified": false,
    "wholeIncome": true
@@ -3216,6 +3260,32 @@
     "Kansas: KDOR Notice 26-11 (Oct 15, 2026) re-confirmed no revenue-trigger rate cut for 2027; REIT treatment in combined reports still unconfirmed",
     "Montana: MCA 15-31-406 checked; no REIT provision found, so REIT treatment remains unconfirmed",
     "Pennsylvania: estimated payment and extension form links (REV-853, REV-857) still redirect on the Department of Revenue site; forms remain unverified"
+   ]
+  },
+  "2026-11-20": {
+   "added": [
+    "New Mexico state rules"
+   ],
+   "attention": [
+    "South Carolina: S.C. Code §12-6-50 does not adopt IRC §§531–564, which include §561 (definition of the dividends-paid deduction); confirm with SCDOR whether a REIT's dividends-paid deduction is allowed.",
+    "Missouri: corporate shareholders receiving REIT dividends face a DOR position denying the Missouri dividend subtraction, which the Administrative Hearing Commission rejected in a 2024 bank case.",
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) is reported as approved but not yet officially certified; the page still uses 4.4%.",
+    "Hawaii: REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income under HRS 235-71(d); the page models Hawaii as conforming.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "New Mexico: forms were confirmed only against the 2020 FYI-350 publication; current CIT-1 instructions not yet checked.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-20",
+   "summary": "Checked federal (IRS letter rulings and REIT tax news), state (KPMG This Week in State Tax, Colorado Amendment 87 status) and international REIT sources since Nov 19; no new enacted REIT rule changes found.",
+   "title": "Daily rule review",
+   "verified": [
+    "Missouri: REIT computation from Form 1120-REIT, no REIT or captive REIT addback, estimate threshold and extension rules confirmed against the 2025 MO-1120 instructions and RSMo §143.431; MO-7004 added",
+    "South Carolina: rechecked S.C. Code §12-6-50; IRC §§531–564 (including §561, which defines the dividends-paid deduction) are not adopted, so REIT treatment remains unconfirmed and the summary was corrected",
+    "Nebraska: 2025 corporation booklet rechecked; still no REIT guidance, so REIT treatment remains unconfirmed",
+    "Michigan: Treasury corporate tax base page rechecked; no REIT-specific rule found, unitary treatment remains unconfirmed",
+    "Idaho: 2005 H.B. 26 (a proposed REIT dividends-paid addback) shows no action after committee referral, so no Idaho REIT addback was found; REIT treatment remains unconfirmed"
    ]
   }
  }
