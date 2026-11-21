@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-20",
-   "nextCheck": "2026-11-21"
+   "lastChecked": "2026-11-21",
+   "nextCheck": "2026-11-22"
   }
  },
  "federal": {
@@ -1545,32 +1545,36 @@
    "exemption": 0,
    "forms": [
     {
-     "due": "On or before the federal return due date (15th day of the 4th month after year end); electronic filers who also pay electronically have until the last day of that month",
+     "due": "On or before the federal corporate due date (15th day of the 4th month after year end; April 15 for calendar-year filers)",
      "form": "CIT-1",
      "name": "New Mexico Corporate Income and Franchise Tax Return",
-     "note": "Also reports the $50 annual franchise tax"
+     "note": "Also reports the $50 annual franchise tax. Subject to the Department's e-file mandate; paper filing needs an approved hardship waiver (RPD-41350 or RPD-41351) requested at least 30 days before the due date"
     },
     {
-     "due": "15th day of the 4th, 6th, 9th and 12th months",
      "form": "CIT-ES",
-     "name": "Corporate Income Tax Estimated Payment Voucher",
-     "note": "Required if the year's liability after credits is $5,000 or more"
+     "name": "New Mexico Corporate Income and Franchise Estimated Tax Payment Voucher",
+     "note": "Required if the year's corporate income tax after credits is $5,000 or more; paid in four installments of 25% each"
     },
     {
      "form": "CIT-EXT",
-     "name": "Corporate Income Tax Extension Payment Voucher",
-     "note": "New Mexico honors a federal extension to file; interest runs from the original due date"
+     "name": "New Mexico Corporate Income and Franchise Tax Extension Payment Voucher",
+     "note": "An extension does not extend the time to pay; interest runs from the original due date"
+    },
+    {
+     "form": "RPD-41096",
+     "name": "Application for Extension of Time to File",
+     "note": "Not needed if a copy of the federal extension is attached to the CIT-1"
     }
    ],
-   "formsVerified": false,
-   "lastVerified": "2026-11-20",
+   "formsVerified": true,
+   "lastVerified": "2026-11-21",
    "minTax": 0,
    "name": "New Mexico",
    "rate": 5.9,
    "rateNote": "Flat 5.9% of New Mexico taxable income for tax years beginning on or after Jan 1, 2025 (NMSA §7-2A-5 as amended by H.B. 252, 2024); previously 4.8% on the first $500,000 and 5.9% above. The separate $50 annual franchise tax is not modeled.",
    "rateSource": "https://law.justia.com/codes/new-mexico/chapter-7/article-2a/section-7-2a-5",
    "rateYear": 2026,
-   "sourceName": "New Mexico Statutes §7-2A-2 (2025, Justia); NM Taxation and Revenue Department, Corporate Income & Franchise Tax overview",
+   "sourceName": "NM Taxation and Revenue Department, 2025 Form CIT-1 Instructions; New Mexico Statutes §7-2A-2 (2025, Justia)",
    "sourceUrl": "https://law.justia.com/codes/new-mexico/chapter-7/article-2a/section-7-2a-2/",
    "summary": "New Mexico taxes corporations on federal taxable income with state adjustments. Since tax years beginning in 2020, a captive REIT (shares not regularly traded and more than 50% owned by the taxpayer) is included in its owner's unitary group, while REITs that are not captive are excluded from unitary groups. A taxpayer must also add back any deduction it took for expenses paid or accrued to a captive REIT. A non-captive REIT filing on its own computes New Mexico income from its federal REIT taxable income, so the dividends-paid deduction carries through.",
    "treatment": "strict",
@@ -1942,6 +1946,72 @@
    "treatment": "strict",
    "verified": true,
    "wholeIncome": true
+  },
+  "VT": {
+   "brackets": [
+    {
+     "over": 0,
+     "rate": 6
+    },
+    {
+     "over": 10000,
+     "rate": 7
+    },
+    {
+     "over": 25000,
+     "rate": 8.5
+    }
+   ],
+   "captive": "No captive REIT addback or captive REIT definition found in 32 V.S.A. §5811 or the 2024 Form CO-411 instructions.",
+   "citation": "32 V.S.A. §§5811(15), (18), 5832, 5862(d); 2024 Form CO-411 Instructions",
+   "code": "VT",
+   "exemption": 0,
+   "forms": [
+    {
+     "due": "Federal due date (April 15 for calendar-year filers); extended due date is 30 days after the federal extended due date",
+     "form": "CO-411",
+     "name": "Vermont Corporate Income Tax Return",
+     "note": "Unitary groups file a combined return on CO-411 (CO-411-U was used for 2008–2013)"
+    },
+    {
+     "form": "BA-402",
+     "name": "Apportionment and Allocation Schedule"
+    },
+    {
+     "form": "BA-410",
+     "name": "Affiliation Schedule",
+     "note": "Combined (unitary) filers"
+    },
+    {
+     "form": "BA-403",
+     "name": "Application for Extension of Time to File",
+     "note": "File by the original due date; does not extend the time to pay"
+    },
+    {
+     "due": "15th day of the 4th, 6th, 9th and 12th months of the tax year",
+     "form": "CO-414",
+     "name": "Corporate Estimated Tax Payment Voucher",
+     "note": "Required if expected Vermont tax exceeds $500"
+    },
+    {
+     "form": "CO-422",
+     "name": "Corporate Income Tax Return Payment Voucher"
+    }
+   ],
+   "formsVerified": true,
+   "lastVerified": "2026-11-21",
+   "minTax": 100,
+   "name": "Vermont",
+   "rate": 8.5,
+   "rateNote": "Marginal rates of 6% on the first $10,000, 7% on $10,001–$25,000 and 8.5% above $25,000 (unchanged since 2007). The minimum tax scales with Vermont gross receipts: $100 (≤$500,000), $500, $2,000, $6,000 (over $5 million to $300 million) and $100,000 (over $300 million); the page models only the $100 floor. Act 164 of 2026 updated federal conformity to 2025 and decoupled from bonus depreciation and some §174A deductions, with no rate change.",
+   "rateSource": "https://tax.vermont.gov/business/corporate-income-tax",
+   "rateYear": 2026,
+   "sourceName": "Vermont Department of Taxes, 2024 Form CO-411 Instructions; 32 V.S.A. §5811 (Vermont Legislature)",
+   "sourceUrl": "https://tax.vermont.gov/sites/tax/files/documents/CO-411-Instr-2024.pdf",
+   "summary": "Vermont taxes C corporations on Vermont net income, which starts from federal taxable income (32 V.S.A. §5811(18)), and requires unitary combined reporting. The Form CO-411 instructions say Vermont does not treat REIT dividends as dividends for its deduction for dividends from income already taxed by Vermont, and that REIT income must be included in a combined group's income in the same way as under IRC §243(d). Neither the statute nor the instructions addresses a REIT's own dividends-paid deduction or a captive REIT addback, so REIT treatment is not confirmed.",
+   "treatment": "mod",
+   "verified": false,
+   "wholeIncome": false
   },
   "WI": {
    "captive": "Wis. Stat. §71.22(9ad) treats a non-traded REIT more than 50% owned by a single corporation as not 'qualified'. The REIT keeps its deduction, but payors add back interest and rent paid to it (§71.26(2)(a)7–9) and combined reports include its dividends to consolidated foreign operating corporations (§71.255(2)(d)3, (4)(f)).",
@@ -3286,6 +3356,31 @@
     "Nebraska: 2025 corporation booklet rechecked; still no REIT guidance, so REIT treatment remains unconfirmed",
     "Michigan: Treasury corporate tax base page rechecked; no REIT-specific rule found, unitary treatment remains unconfirmed",
     "Idaho: 2005 H.B. 26 (a proposed REIT dividends-paid addback) shows no action after committee referral, so no Idaho REIT addback was found; REIT treatment remains unconfirmed"
+   ]
+  },
+  "2026-11-21": {
+   "added": [
+    "Vermont state rules"
+   ],
+   "attention": [
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) is reported as approved but not yet officially certified; the page still uses 4.4%.",
+    "Vermont: the CO-411 instructions exclude REIT dividends from Vermont's dividend deduction and include REIT income in combined groups; whether a REIT keeps its federal dividends-paid deduction is unconfirmed. The minimum tax rises with gross receipts (up to $100,000) but the page models only $100.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Hawaii: REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income under HRS 235-71(d); the page models Hawaii as conforming.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-21",
+   "summary": "Checked federal (IRS letter rulings released Nov 20, REIT tax news), state (Colorado Amendment 87 status, Vermont Act 164) and international REIT sources since Nov 20; no new enacted REIT rule changes found.",
+   "title": "Daily rule review",
+   "verified": [
+    "New Mexico: CIT-1, CIT-ES, CIT-EXT and RPD-41096, the $5,000 estimate threshold, e-file mandate, 5.9% rate and captive REIT rules confirmed against the 2025 Form CIT-1 instructions; forms list corrected",
+    "Kansas: 2025 corporate booklet re-confirmed the 3.5% normal tax and 3% surtax over $50,000; it does not address REITs, so REIT treatment remains unconfirmed",
+    "Pennsylvania: Department of Revenue CNIT page rechecked; estimated payment and extension forms still not listed, so forms remain unconfirmed",
+    "Alaska: no current-year Form 6000 instructions found on an official site, so REIT combined-group treatment and forms remain unconfirmed",
+    "Montana: no Montana statute or guidance on REITs found, so REIT treatment remains unconfirmed"
    ]
   }
  }
