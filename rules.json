@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-21",
-   "nextCheck": "2026-11-22"
+   "lastChecked": "2026-11-22",
+   "nextCheck": "2026-11-23"
   }
  },
  "federal": {
@@ -1475,6 +1475,64 @@
    "verified": false,
    "wholeIncome": true
   },
+  "NH": {
+   "captive": "No separate captive REIT rule is needed: all REITs, captive or not, are taxed at the entity level without the dividends-paid deduction (RSA 77-A:1, I; Rev 302.05(d)).",
+   "citation": "RSA 77-A:1, I; RSA 77-A:2; RSA 77-A:6–7; N.H. Admin. Rules Rev 301.16, 302.05(d)",
+   "code": "NH",
+   "exemption": 0,
+   "forms": [
+    {
+     "due": "15th day of the 4th month after the tax year ends (April 15 for calendar-year filers)",
+     "form": "NH-1120",
+     "name": "Corporate Business Profits Tax Return",
+     "note": "Attach pages 1–5 of the federal return"
+    },
+    {
+     "form": "NH-1120-WE",
+     "name": "Combined Business Profits Tax Return",
+     "note": "Unitary combined groups"
+    },
+    {
+     "form": "BT-SUMMARY",
+     "name": "Business Tax Summary",
+     "note": "Required with every BPT or BET return"
+    },
+    {
+     "form": "BET",
+     "name": "Business Enterprise Tax Return",
+     "note": "Required when gross receipts or the enterprise value tax base exceed $281,000 (periods beginning on or after Jan 1, 2023)"
+    },
+    {
+     "form": "BT-EXT",
+     "name": "Application for 7-Month Extension / Payment Form",
+     "note": "Automatic extension if 100% of tax is paid by the original due date; form used to pay the balance"
+    },
+    {
+     "due": "15th day of the 4th, 6th, 9th and 12th months of the tax year",
+     "form": "NH-1120-ES",
+     "name": "Estimated Business Tax Payment Form",
+     "note": "Required if BPT exceeds $200 or BET exceeds $260"
+    },
+    {
+     "form": "DP-2210/2220",
+     "name": "Exceptions and Penalties for Underpayment of Estimated Business Tax"
+    }
+   ],
+   "formsVerified": true,
+   "lastVerified": "2026-11-22",
+   "minTax": 0,
+   "name": "New Hampshire",
+   "rate": 7.5,
+   "rateNote": "Flat 7.5% business profits tax for taxable periods ending on or after Dec 31, 2023 (RSA 77-A:2). A return is required when gross business income exceeds $103,000 (periods beginning 2023–2024; adjusted biennially for inflation). The 0.55% business enterprise tax is not modeled.",
+   "rateSource": "https://revenue.nh.gov/resource-center/frequently-asked-questions/business-profits-tax",
+   "rateYear": 2026,
+   "sourceName": "New Hampshire Code of Administrative Rules, Rev 300 (Business Profits Tax)",
+   "sourceUrl": "https://gc.nh.gov/rules/state_agencies/rev300.html",
+   "summary": "New Hampshire's business profits tax treats a REIT as a taxable entity, and Rev 302.05(d) computes its tax base before the IRC §857(b)(2) adjustments, so the federal dividends-paid deduction is not allowed and a REIT is taxed at 7.5% on income it distributes. New Hampshire also levies the business enterprise tax (0.55%) on a base that includes dividends paid, compensation and interest, which the page does not model.",
+   "treatment": "strict",
+   "verified": true,
+   "wholeIncome": true
+  },
   "NJ": {
    "brackets": [
     {
@@ -2113,9 +2171,10 @@
   },
   "au": {
    "country": "Australia",
-   "distribution": "No fixed distribution percentage. Income is taxed to investors through present entitlement or attribution; undistributed income can be taxed to the trustee.",
+   "distribution": "No fixed percentage for ordinary unit trusts, which usually distribute 100% of trust income under their constitutions. A managed investment trust (MIT) must distribute at least its taxable income within three months of year-end, or the shortfall is taxed at the top rate.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-22",
+   "leverage": "No REIT-specific gearing limit; thin capitalisation rules apply, including a fixed-ratio cap of debt deductions at 30% of tax EBITDA from income years starting July 1, 2023.",
    "localFilings": [
     {
      "form": "Company tax return",
@@ -2127,12 +2186,12 @@
     }
    ],
    "order": 8,
-   "ownership": "No capital or listing requirements for the trust itself; widely held requirements apply for MIT status. No restriction on foreign assets.",
+   "ownership": "No special formation or listing requirement. MIT/AMIT status requires an Australian connection, a registered or qualifying wholesale scheme, widely held ownership and not being closely held (for example, no foreign individual holding 10% or more).",
    "regime": "MIT / AMIT",
-   "sourceName": "PwC Worldwide REIT Regimes",
-   "sourceUrl": "https://www.pwc.com/gx/en/industries/financial-services/asset-management/publications/worldwide-real-estate-investment-trust-regimes.html",
-   "tests": "Trust must not carry on or control an active trading business (eligible investment business rules).",
-   "verified": false
+   "sourceName": "EPRA Global REIT Survey 2025",
+   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
+   "tests": "The trust must carry on only an eligible investment business (mainly investing in land for rent, plus certain financial instruments); a trading trust is taxed like a company. A safe harbour allows up to 25% of land-related income to be trading income and a 2% allowance for other non-eligible income.",
+   "verified": true
   },
   "be": {
    "country": "Belgium",
@@ -2198,9 +2257,10 @@
   },
   "ca": {
    "country": "Canada",
-   "distribution": "No statutory percentage; trusts typically distribute all taxable income to avoid trust-level tax.",
+   "distribution": "No statutory percentage; trusts invariably distribute all taxable income because amounts paid or payable to unitholders are deductible, so the trust usually pays no tax.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-22",
+   "leverage": "No REIT-specific limit; thin capitalisation (1.5:1 on debt from specified non-residents) and EIFEL (30% of tax EBITDA) rules apply.",
    "localFilings": [
     {
      "form": "T2",
@@ -2212,12 +2272,12 @@
     }
    ],
    "order": 10,
-   "ownership": "Canadian-resident trust with publicly listed units.",
+   "ownership": "Canadian-resident trust whose units are listed or traded on a stock exchange or other public market; mutual fund trust status also requires at least 150 unitholders each holding units worth at least CAD 500.",
    "regime": "REIT exception (SIFT rules)",
    "sourceName": "EPRA Global REIT Survey 2025",
    "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
-   "tests": "At least 90% of non-portfolio property is qualified REIT property; 90% of revenue qualifying REIT revenue; 75% from rents, mortgage interest and real property gains; 75% of equity value in real property, cash and government debt.",
-   "verified": false
+   "tests": "At least 90% of non-portfolio property is qualified REIT property; at least 90% of gross REIT revenue from rent, interest, capital property gains, dividends and similar; at least 75% from rent, mortgage interest and real property gains; at least 75% of equity value in real property, cash and government debt at all times. Canadian hotel and senior living operations generally cannot use the exception.",
+   "verified": true
   },
   "ch": {
    "country": "Switzerland",
@@ -2269,9 +2329,10 @@
   },
   "de": {
    "country": "Germany",
-   "distribution": "At least 90% of HGB distributable profit.",
+   "distribution": "At least 90% of net income under German GAAP (HGB), paid by the end of the following business year; up to half of gains on real estate disposals may be placed in a reserve that must be released within two years.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-22",
+   "leverage": "Equity must be at least 45% of the IAS 40 value of immovable property, which caps leverage at about 66.25% of total assets.",
    "localFilings": [
     {
      "form": "KSt return",
@@ -2283,12 +2344,12 @@
     }
    ],
    "order": 6,
-   "ownership": "Listed stock corporation with €15m minimum capital and German seat. At least 15% free float (25% at IPO); no shareholder may directly hold 10% or more.",
+   "ownership": "Listed stock corporation (REIT-AG) with its seat and management in Germany, EUR 15 million minimum capital and shares admitted to an organised market in the EU/EEA. At least 25% free float at IPO and 15% afterwards (held by holders under 3% each); no shareholder may directly hold 10% or more.",
    "regime": "G-REIT",
-   "sourceName": "EPRA Global REIT Survey (Germany)",
-   "sourceUrl": "https://www.epra.com/media/EPRA_REIT_2010_Germany.pdf",
-   "tests": "At least 75% of assets in immovable property and at least 75% of income from it. German residential property built before 2007 is excluded.",
-   "verified": false
+   "sourceName": "EPRA Global REIT Survey 2025",
+   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
+   "tests": "At least 75% of total assets in immovable property and at least 75% of gross earnings from renting, leasing and selling it. Services are capped at 20% of assets and earnings and must sit in a wholly owned service company; real estate trading is prohibited. German residential property built before 2007 is excluded.",
+   "verified": true
   },
   "es": {
    "country": "Spain",
@@ -2343,7 +2404,7 @@
    "country": "Hong Kong",
    "distribution": "At least 90% of audited annual net income after tax.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-22",
    "leverage": "Borrowing limit of 50% of gross asset value.",
    "localFilings": [
     {
@@ -2356,12 +2417,12 @@
     }
    ],
    "order": 11,
-   "ownership": "Collective investment scheme authorized by the SFC and listed on HKEX.",
+   "ownership": "Unit trust authorized by the SFC with an independent trustee and a management company; listing on the Stock Exchange of Hong Kong is mandatory. No minimum capital and no restriction on foreign unitholders.",
    "regime": "HK REIT",
    "sourceName": "EPRA Global REIT Survey 2025",
    "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
-   "tests": "At least 75% of gross asset value in income-generating real estate; property development limited.",
-   "verified": false
+   "tests": "Must invest primarily in income-producing real estate (Hong Kong or overseas) and generally hold each property at least two years. Non-income-producing or under-development property is capped at 25% of gross asset value, and property development at 10% (up to 25% if permitted and disclosed).",
+   "verified": true
   },
   "ie": {
    "country": "Ireland",
@@ -2438,22 +2499,24 @@
   },
   "jp": {
    "country": "Japan",
-   "distribution": "More than 90% of distributable profits must be distributed to deduct dividends.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "distribution": "More than 90% of distributable profits must be distributed in the same fiscal period to deduct dividends.",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-22",
+   "leverage": "No statutory gearing limit (typical LTV policies are about 55–60%); for the tax deduction, loans must come only from institutional investors.",
    "localFilings": [
     {
      "form": "Corporate tax return",
-     "name": "National and local corporate tax returns for Japan-source income"
+     "name": "Japanese corporate tax return for taxable gains on J-REIT units",
+     "note": "Needed only when a foreign shareholder without a Japanese PE sells units in a real property holding corporation after holding more than 5%; dividends bear 15.315% final withholding with no return"
     }
    ],
    "order": 9,
-   "ownership": "Investment corporation; listed or widely held; no group of three or fewer holding more than 50%.",
+   "ownership": "Investment corporation under the Investment Trust Law; listing is optional. For the dividend deduction, the J-REIT needs at least 50 holders (or only qualified institutional investors) at period end, and no shareholder with its affiliates may hold more than 50% of shares or voting rights.",
    "regime": "J-REIT",
-   "sourceName": "PwC Worldwide REIT Regimes",
-   "sourceUrl": "https://www.pwc.com/gx/en/industries/financial-services/asset-management/publications/worldwide-real-estate-investment-trust-regimes.html",
-   "tests": "Majority of assets in specified real estate assets.",
-   "verified": false
+   "sourceName": "EPRA Global REIT Survey 2025",
+   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
+   "tests": "More than 50% of total assets in real estate and related assets; generally may not hold 50% or more of another company. Listed J-REITs also need at least 70% of investment assets and 95% of total assets in real estate-related assets or cash.",
+   "verified": true
   },
   "kr": {
    "country": "South Korea",
@@ -3381,6 +3444,32 @@
     "Pennsylvania: Department of Revenue CNIT page rechecked; estimated payment and extension forms still not listed, so forms remain unconfirmed",
     "Alaska: no current-year Form 6000 instructions found on an official site, so REIT combined-group treatment and forms remain unconfirmed",
     "Montana: no Montana statute or guidance on REITs found, so REIT treatment remains unconfirmed"
+   ]
+  },
+  "2026-11-22": {
+   "added": [
+    "New Hampshire state rules"
+   ],
+   "attention": [
+    "New Hampshire: REITs get no dividends-paid deduction under Rev 302.05(d), and the 0.55% business enterprise tax, whose base includes dividends paid, is not modeled on the page.",
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) is reported as approved but not yet officially certified; the page still uses 4.4%.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Hawaii: REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income under HRS 235-71(d); the page models Hawaii as conforming.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-22",
+   "summary": "Checked federal (IRS letter rulings and REIT tax news), state (KPMG This Week in State Tax for Nov 16, Colorado Amendment 87 certification) and international REIT sources since Nov 21; no new enacted REIT rule changes found.",
+   "title": "Daily rule review",
+   "verified": [
+    "Germany: distribution (90% of HGB net income), asset, income, free-float, 10% holding and 45% equity rules confirmed and expanded against the EPRA Global REIT Survey 2025",
+    "Japan: ownership test corrected (no holder with affiliates over 50%, at least 50 holders) and filings confirmed against the EPRA Global REIT Survey 2025",
+    "Hong Kong: 90% distribution, 50% gearing cap, SFC authorization, listing and asset limits confirmed against the EPRA Global REIT Survey 2025",
+    "Australia: MIT distribution, eligible investment business, widely held and 30% EBITDA thin capitalisation rules confirmed against the EPRA Global REIT Survey 2025; unconfirmed foreign-asset claim removed",
+    "Canada: SIFT REIT exception tests, residence and listing requirements confirmed against the EPRA Global REIT Survey 2025"
    ]
   }
  }
