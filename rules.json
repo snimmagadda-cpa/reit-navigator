@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-22",
-   "nextCheck": "2026-11-23"
+   "lastChecked": "2026-11-23",
+   "nextCheck": "2026-11-24"
   }
  },
  "federal": {
@@ -658,7 +658,7 @@
      "rate": 6.4
     }
    ],
-   "citation": "HRS ch. 235; SB 2362 SD1 (2026); SB 592 (2025–2026)",
+   "citation": "HRS §235-71(d); HRS ch. 235; SB 2362 SD1 (2026); SB 592 (2025–2026)",
    "code": "HI",
    "forms": [
     {
@@ -674,17 +674,17 @@
     }
    ],
    "formsVerified": true,
-   "lastVerified": "2026-11-11",
+   "lastVerified": "2026-11-23",
    "name": "Hawaii",
    "rate": 6.4,
    "rateNote": "4.4% up to $25,000, 5.4% on $25,001–$100,000 and 6.4% above $100,000, per the 2025 Form N-30 instructions; net capital gain has a 4% alternative computation (not modeled).",
    "rateSource": "https://files.hawaii.gov/tax/forms/current/n30ins.pdf",
    "rateYear": 2026,
-   "sourceName": "Hawaii Legislature, SB 2362 SD1 (2026)",
-   "sourceUrl": "https://data.capitol.hawaii.gov/sessions/session2026/Bills/SB2362_SD1_.HTM",
-   "summary": "HRS §235-71(d) computes a REIT's taxable income under IRC §§857 and 858 and limits the dividends-paid deduction to dividends attributable to income taxable in Hawaii. Bills to repeal the deduction for REITs failed again in 2026: SB 2362 (amended into a study) passed the Senate but stalled in the House, and SB 592 was not enacted; both are listed as failed after the 2025–2026 biennium ended. Confirm the attributable-income limit's current wording before relying on it.",
-   "treatment": "conf",
-   "verified": false
+   "sourceName": "Hawaii Revised Statutes §235-71 (current)",
+   "sourceUrl": "https://data.capitol.hawaii.gov/hrscurrent/Vol04_Ch0201-0257/HRS0235/HRS_0235-0071.htm",
+   "summary": "Under HRS §235-71(d), a REIT computes taxable income under IRC §§857 and 858 with Hawaii adjustments, but its dividends-paid deduction is limited to dividends attributable to income taxable in Hawaii, so the federal deduction does not carry through in full. Since 2022, REITs must notify the Department within 15 days of starting Hawaii operations, identify themselves as REITs on the return and attach the federal return, or face a $50-per-day penalty. Bills to repeal the deduction for REITs (SB 2362, SB 592) failed when the 2025–2026 biennium ended.",
+   "treatment": "mod",
+   "verified": true
   },
   "IA": {
    "brackets": [
@@ -2353,9 +2353,9 @@
   },
   "es": {
    "country": "Spain",
-   "distribution": "80% of rental profits, 50% of qualifying gains and 100% of dividends from qualifying subsidiaries. Distribution decided within 6 months of year end and paid within the following month.",
+   "distribution": "100% of dividends from qualifying entities, at least 50% of gains on qualifying property or holdings (the rest reinvested within three years or distributed) and at least 80% of other profits. The distribution must be approved within six months of year end and paid in the following month.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-23",
    "localFilings": [
     {
      "form": "Modelo 200 or 210",
@@ -2368,19 +2368,19 @@
     }
    ],
    "order": 7,
-   "ownership": "Shares traded on a regulated market or a multilateral trading facility.",
-   "recent": "A 15% special levy applies to undistributed profits.",
+   "ownership": "Minimum share capital of €5 million; shares must be listed on a regulated market or multilateral trading facility (e.g. Spanish Continuous Market, BME Growth, BME Scaleup), with a two-year grace period from the election.",
+   "recent": "A 15% levy applies to undistributed profits from income not taxed at the standard rate (self-assessed within two months of the profit-allocation resolution), and a 19% levy applies to dividends paid to holders of 5% or more who are exempt or taxed below 10%.",
    "regime": "SOCIMI",
-   "sourceName": "Ashurst on the SOCIMI regime",
-   "sourceUrl": "https://www.ashurst.com/en/insights/legal-regime-for-spanish-reit-socimi/",
-   "tests": "At least 80% of assets and income linked to qualifying urban real estate held for rent; minimum holding periods apply.",
-   "verified": false
+   "sourceName": "EPRA Global REIT Survey 2025 (Spain chapter)",
+   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
+   "tests": "At least 80% of assets (consolidated balance sheet) must be qualifying urban real estate held for rent or qualifying holdings, and at least 80% of revenue must come from leasing qualifying assets or dividends from qualifying subsidiaries. Qualifying assets must be held for three years; early sales are taxed at the standard 25% rate.",
+   "verified": true
   },
   "fr": {
    "country": "France",
-   "distribution": "95% of rental income, 70% of disposal gains, and 100% of dividends from SIIC subsidiaries.",
+   "distribution": "At least 95% of exempt rental profits by the end of the following tax year, 70% of capital gains by the end of the second following tax year, and 100% of dividends from electing SIIC subsidiaries by the end of the year received.",
    "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "lastVerified": "2026-11-23",
    "localFilings": [
     {
      "form": "2065",
@@ -2393,12 +2393,13 @@
     }
    ],
    "order": 5,
-   "ownership": "Listed on a French regulated market; minimum share capital of €15m; no single shareholder or group acting together may hold 60% or more.",
+   "ownership": "Parent listed on an EU/EEA regulated market (or equivalent) with share capital of at least €15 million; no shareholder or group acting together may hold 60% or more, and at election at least 15% must be held by shareholders each owning under 2%.",
+   "recent": "A 20% levy applies to dividends paid out of exempt income to 10%-or-more shareholders that are exempt or taxed below two-thirds of the standard rate on those dividends.",
    "regime": "SIIC",
-   "sourceName": "EPRA European REIT table",
-   "sourceUrl": "https://www.epra.com/download_file/2257/0",
-   "tests": "Principal purpose of acquiring or building property for rental.",
-   "verified": false
+   "sourceName": "EPRA Global REIT Survey 2025 (France chapter)",
+   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
+   "tests": "Principal activity must be acquiring or building property for rent (or holding similar partnerships or companies); ancillary activities are capped at 20% and lessor finance leasing at 50% of gross asset value, tested at mid-year and year end. Electing triggers a 19% exit tax on unrealised real estate gains, payable in four annual instalments.",
+   "verified": true
   },
   "hk": {
    "country": "Hong Kong",
@@ -3470,6 +3471,29 @@
     "Hong Kong: 90% distribution, 50% gearing cap, SFC authorization, listing and asset limits confirmed against the EPRA Global REIT Survey 2025",
     "Australia: MIT distribution, eligible investment business, widely held and 30% EBITDA thin capitalisation rules confirmed against the EPRA Global REIT Survey 2025; unconfirmed foreign-asset claim removed",
     "Canada: SIFT REIT exception tests, residence and listing requirements confirmed against the EPRA Global REIT Survey 2025"
+   ]
+  },
+  "2026-11-23": {
+   "added": [],
+   "attention": [
+    "Hawaii: the page now treats Hawaii as modifying the REIT deduction; the estimate still uses full federal income, so the attributable-income limit needs a tax professional's computation.",
+    "Colorado: Amendment 87 (top rate 8.4% from 2027) is still awaiting official certification; the page uses 4.4%.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "New Hampshire: no dividends-paid deduction for REITs, and the business enterprise tax is not modeled.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-23",
+   "summary": "Checked federal (IRS letter rulings and guidance), state (KPMG This Week in State Tax, Colorado Amendment 87 certification) and international REIT sources since Nov 22; no new enacted REIT rule changes found. State and country coverage lists are complete.",
+   "title": "Daily rule review",
+   "verified": [
+    "Hawaii: HRS §235-71(d) confirmed that the REIT dividends-paid deduction is limited to dividends attributable to Hawaii-taxable income; treatment corrected from conforming to modified, and REIT notice and return requirements added",
+    "Spain: SOCIMI distribution, asset/income, holding period, listing, capital and 15%/19% levy rules confirmed against the EPRA Global REIT Survey 2025 (filing forms still unconfirmed)",
+    "France: SIIC distribution, activity, listing, 60% ownership cap, 15% free float, exit tax and 20% levy rules confirmed against the EPRA Global REIT Survey 2025 (filing forms still unconfirmed)",
+    "Pennsylvania: estimated payment and extension forms (REV-857, REV-853) could not be opened on the Department of Revenue site, so forms remain unconfirmed"
    ]
   }
  }
