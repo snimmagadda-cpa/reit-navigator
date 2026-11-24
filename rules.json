@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-23",
-   "nextCheck": "2026-11-24"
+   "lastChecked": "2026-11-24",
+   "nextCheck": "2026-11-25"
   }
  },
  "federal": {
@@ -2472,7 +2472,7 @@
    "country": "Italy",
    "distribution": "Distribute at least 70% of net profit from the exempt rental business each year (or 70% of total profit if lower) and 50% of net gains on qualifying property and holdings within the next two years. Distributions are subject to withholding: the parliamentary research service cites 20%, while advisers commonly apply 26% following the 2014 general increase in financial income rates; confirm the current rate.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-01",
+   "lastVerified": "2026-11-24",
    "leverage": "No statutory leverage limit identified.",
    "localFilings": [
     {
@@ -2490,13 +2490,13 @@
     }
    ],
    "order": 15,
-   "ownership": "SIIQ: Italian-resident SpA listed on an EU/EEA regulated market; no shareholder may hold more than 60% of voting or profit rights, and at least 25% of shares must be held by shareholders with no more than 2% each (not required if already listed). SIINQ: unlisted SpA, Srl or SApA with capital of at least EUR 50,000 and more than 50% held by a SIIQ or SIINQ, using IFRS accounts.",
+   "ownership": "SIIQ: Italian-resident SpA listed on an EU/EEA regulated market; no shareholder may directly or indirectly hold more than 60% of voting or profit rights, and at least 25% of shares must be held by shareholders with no more than 2% each when the option is exercised (not required if already listed). SIINQ: unlisted SpA, Srl or SApA with share capital of at least EUR 50,000, more than 50% of votes and profits held by a SIIQ or SIINQ (or 100% held by a group of qualifying SIIQs, SIINQs and real estate funds in which the SIIQ/SIINQ holders have at least 50%), using IAS/IFRS accounts.",
    "recent": "No regime changes identified for 2025–2026 in the Chamber of Deputies research summary (updated July 2026).",
    "regime": "SIIQ / SIINQ (Law 296/2006, art. 1, paras. 119–141-bis)",
-   "sourceName": "Camera dei Deputati, Il regime fiscale SIIQ e SIINQ",
+   "sourceName": "Camera dei Deputati, Il regime fiscale SIIQ e SIINQ (updated 30 July 2026)",
    "sourceUrl": "https://temi.camera.it/leg19/post/il-regime-fiscale-siiq-e-siinq.html",
    "tests": "Rental must be the main activity: at least 80% of assets in rental property (and qualifying SIIQ/SIINQ or real estate fund holdings) and at least 80% of income from rents. Rental income is exempt from IRES and IRAP. On entry, rental properties are deemed sold at normal value and the net gain bears a 20% substitute tax (or can be included in income, optionally over five years).",
-   "verified": false
+   "verified": true
   },
   "jp": {
    "country": "Japan",
@@ -2521,9 +2521,9 @@
   },
   "kr": {
    "country": "South Korea",
-   "distribution": "REITs must distribute at least 90% of the Commercial Act dividend limit each year (asset valuation losses excluded since Feb 2024); self-managed REITs may distribute as little as 50% with a special shareholder resolution. Entrusted-management REITs and corporate restructuring (CR) REITs that distribute at least 90% can deduct the dividends under Corporate Tax Act Art. 51-2; self-managed REITs are taxed as ordinary corporations.",
-   "filingsVerified": false,
-   "lastVerified": "2026-11-13",
+   "distribution": "REITs must distribute at least 90% of the Commercial Act dividend limit each year (asset appraisal losses excluded) and may not accumulate statutory earned surplus reserves; a self-managed REIT may distribute between 50% and 90% with a special shareholder resolution (REIT Act Art. 28). Entrusted-management REITs and corporate restructuring (CR) REITs that distribute at least 90% of distributable profits can deduct the dividends from income under Corporate Tax Act Art. 51-2(1)(4), on application; self-managed REITs are not covered and are taxed as ordinary corporations.",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-24",
    "leverage": "Borrowings and bonds are capped at twice equity capital, or up to 10 times with an extraordinary shareholder resolution (Art. 29).",
    "localFilings": [
     {
@@ -2536,10 +2536,10 @@
    "ownership": "A shareholder and related persons may not hold more than 50% of the shares (Art. 15); at least 30% must be offered to the public within two years of authorization or registration (Art. 14-8), with exemptions for some REITs; a REIT meeting listing requirements must list without delay (Art. 20).",
    "recent": "Feb 2024 amendments excluded asset valuation losses from the dividend limit and eased the real estate test for development-company stakes (over 20% instead of over 50%).",
    "regime": "K-REIT (real estate investment company under the Real Estate Investment Company Act)",
-   "sourceName": "Korea Legislation Research Institute, Real Estate Investment Company Act (Act No. 20338, Feb 20, 2024) and Corporate Tax Act Art. 51-2",
+   "sourceName": "Korea Legislation Research Institute, Real Estate Investment Company Act (Act No. 20338, Feb 20, 2024) and Corporate Tax Act Art. 51-2 (Act No. 20775, Mar 14, 2025)",
    "sourceUrl": "https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=65854&type=part&key=35",
    "tests": "After the minimum-capital preparation period, at least 80% of total assets must be real estate, real estate-related securities and cash, and at least 70% must be real estate (including buildings under construction), tested quarterly (REIT Act Art. 25). Minimum capital is KRW 7 billion for self-managed and KRW 5 billion for entrusted and CR-REITs (Art. 10).",
-   "verified": false
+   "verified": true
   },
   "lu": {
    "country": "Luxembourg",
@@ -2618,8 +2618,8 @@
   "nz": {
    "country": "New Zealand",
    "distribution": "New Zealand has no dedicated REIT regime. Listed property vehicles generally register as listed portfolio investment entities (PIEs): the company pays tax on its own income at its basic rate (the company rate), cannot pass losses to investors, and pays fully imputation-credited dividends without deducting resident withholding tax. Resident individuals can choose whether to include listed PIE dividends in their returns. No minimum distribution is required.",
-   "filingsVerified": false,
-   "lastVerified": "2026-11-10",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-24",
    "leverage": "No tax-law leverage limit identified in this run.",
    "localFilings": [
     {
@@ -2631,16 +2631,16 @@
    "ownership": "Listed on a recognised NZ exchange (or listing within 2 years of registration).",
    "recent": "No recent changes confirmed in this run.",
    "regime": "No REIT regime (listed PIE used for property vehicles)",
-   "sourceName": "Inland Revenue, Listed portfolio investment entity",
+   "sourceName": "Inland Revenue (IRD), Listed portfolio investment entity",
    "sourceUrl": "https://www.ird.govt.nz/roles/portfolio-investment-entities/types-of-portfolio-investment-entities/listed-portfolio-investment-entity",
-   "tests": "Listed PIE status requires listing on a recognised New Zealand exchange and registration with Inland Revenue (cannot be a multi-rate PIE). An unlisted company may register if it intends to list, has 100+ shareholders or meets other conditions, but must list within 2 years. General PIE investor and income-type eligibility rules also apply.",
-   "verified": false
+   "tests": "Listed PIE status requires listing on a recognised New Zealand exchange and registration with Inland Revenue as a listed PIE; a listed PIE cannot be a multi-rate PIE. An unlisted company may register if it intends to list, has 100 or more shareholders, has applied to the Financial Markets Authority for an exemption to disclose its intention to list, or shows Inland Revenue it has the required consents, but it stops being a listed PIE if it has not listed within 2 years of its start date. General PIE investor and income-type eligibility rules also apply.",
+   "verified": true
   },
   "pl": {
    "country": "Poland",
    "distribution": "Poland has no REIT regime; REITs cannot currently be established under Polish law. Investors usually hold property directly or through ordinary companies, and investment funds are an alternative but have little market share. There is no distribution requirement outside the regime. A Polish REIT (SINN, Spółka Inwestująca w Najem Nieruchomości) has been proposed repeatedly since 2018; the announced assumptions (proposal only) include distributing at least 90% of income as dividends.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-05",
+   "lastVerified": "2026-11-24",
    "leverage": "No REIT-specific limit; the proposal would cap loan-to-value at 50%.",
    "localFilings": [
     {
@@ -2651,18 +2651,18 @@
    ],
    "order": 19,
    "ownership": "Proposed SINN would have to be listed on a stock exchange (proposal only).",
-   "recent": "No enacted REIT law identified as of Nov 2026. Real estate tax rules changed from 1 Jan 2025 with new autonomous definitions of buildings and structures, which may raise tax burdens.",
+   "recent": "No enacted REIT law identified as of Nov 2026. The government presented preliminary SINN assumptions in April 2024 and finished analytical work on a draft in March 2025, but no bill had been sent to the Sejm; in August 2025 the finance minister reportedly ruled out residential REITs. Real estate tax rules changed from 1 Jan 2025 with new autonomous definitions of buildings and structures, which may raise tax burdens.",
    "regime": "No REIT regime",
-   "sourceName": "KPMG Poland, Real Estate Investment Trusts in Poland; EY, The Polish Real Estate Guide 2026",
+   "sourceName": "KPMG Poland, Real Estate Investment Trusts in Poland (Apr 2025); BANK.pl, REIT-y w Polsce (Sep 2025); EY, The Polish Real Estate Guide 2026",
    "sourceUrl": "https://kpmg.com/pl/en/insights/law/real-estate-investment-trusts-in-poland.html",
    "tests": "No enacted asset or income tests. Proposed SINN assumptions (not enacted): KNF-supervised listed joint-stock company with PLN 100 million minimum share capital, at least 90% of income from leasing or selling Polish property (commercial or residential), maximum 50% loan-to-value, and a preferential 10% tax rate with no further tax for investors. EY said in March 2026 that the framework and timeline for a draft were still unknown.",
-   "verified": false
+   "verified": true
   },
   "se": {
    "country": "Sweden",
    "distribution": "Sweden has no REIT regime and no tax-transparent real estate vehicle; trusts are not a recognised form. Property is usually held by ordinary Swedish limited companies (aktiebolag), often one company per property, inside listed or private property groups. These companies pay 20.6% corporate tax on rental income and gains, and there is no distribution requirement.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-04",
+   "lastVerified": "2026-11-24",
    "leverage": "No REIT-specific leverage limit; general Swedish interest deduction limitation rules apply (not detailed here).",
    "localFilings": [
     {
@@ -2679,10 +2679,10 @@
    "ownership": "No REIT-specific ownership or listing requirements. Many Swedish property groups are listed on Nasdaq Stockholm as ordinary companies.",
    "recent": "No REIT regime changes identified for 2026.",
    "regime": "No REIT regime",
-   "sourceName": "RSM Sweden, Tax treatment of income and gains of Swedish real estate (updated March 2026)",
+   "sourceName": "RSM Sweden, Quick overview of Swedish real estate (updated 4 March 2026)",
    "sourceUrl": "https://www.rsm.global/sweden/en/quick-overview-swedish-real-estate",
    "tests": "No REIT-style asset or income tests. Investors usually buy and sell property companies rather than the properties themselves, because sales of unlisted shares in property companies are generally exempt from corporate tax, while a direct transfer of property attracts 4.25% stamp duty for company buyers (1.5% for individuals) on the higher of price and assessed value. Annual real estate tax is about 1% for commercial office property and 0.5% for industrial property; residential property pays a per-flat fee.",
-   "verified": false
+   "verified": true
   },
   "sg": {
    "country": "Singapore",
@@ -3494,6 +3494,30 @@
     "Spain: SOCIMI distribution, asset/income, holding period, listing, capital and 15%/19% levy rules confirmed against the EPRA Global REIT Survey 2025 (filing forms still unconfirmed)",
     "France: SIIC distribution, activity, listing, 60% ownership cap, 15% free float, exit tax and 20% levy rules confirmed against the EPRA Global REIT Survey 2025 (filing forms still unconfirmed)",
     "Pennsylvania: estimated payment and extension forms (REV-857, REV-853) could not be opened on the Department of Revenue site, so forms remain unconfirmed"
+   ]
+  },
+  "2026-11-24": {
+   "added": [],
+   "attention": [
+    "Italy: official sources cite a 20% withholding on SIIQ distributions while advisers commonly apply 26%; confirm the rate before relying on it.",
+    "Colorado: Amendment 87 (graduated rates up to 8.4% from 2027) is still awaiting official certification, and a constitutional challenge was reported Nov 19; the page uses 4.4%.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Alaska, Idaho, Kansas, Maine, Michigan, Montana and Nebraska: REIT treatment rests on the absence of any REIT provision in current statutes and returns; still unverified.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-24",
+   "summary": "Checked federal (IRS letter rulings and REIT tax news), state (KPMG This Week in State Tax, Colorado Amendment 87 status) and international REIT sources since Nov 23; no new enacted REIT rule changes found. Five country regimes were verified against official or adviser sources.",
+   "title": "Daily rule review",
+   "verified": [
+    "New Zealand: listed PIE rules, eligibility conditions and filing obligations (income tax return only, no PIE returns) confirmed against Inland Revenue; tests text expanded",
+    "Italy: SIIQ/SIINQ ownership, 80% asset and income tests, 70%/50% distribution rules and 20% entry tax confirmed against the Chamber of Deputies summary (updated July 2026); filing forms still unconfirmed",
+    "Sweden: no REIT regime, 20.6% corporate tax, 4.25%/1.5% stamp duty and property tax rates confirmed against RSM Sweden (March 2026); filing forms still unconfirmed",
+    "South Korea: REIT Act Arts. 10, 14-8, 15, 20, 25, 28 and 29 and the Corporate Tax Act Art. 51-2 dividend deduction (entrusted-management and CR-REITs only, on application) confirmed against KLRI translations",
+    "Poland: no enacted REIT regime confirmed (KPMG Poland, BANK.pl); recent developments updated to note the draft was never sent to the Sejm and residential REITs were reportedly ruled out in Aug 2025"
    ]
   }
  }
