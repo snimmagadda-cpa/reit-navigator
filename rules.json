@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-24",
-   "nextCheck": "2026-11-25"
+   "lastChecked": "2026-11-25",
+   "nextCheck": "2026-11-26"
   }
  },
  "federal": {
@@ -1101,17 +1101,17 @@
     }
    ],
    "formsVerified": true,
-   "lastVerified": "2026-11-16",
+   "lastVerified": "2026-11-25",
    "name": "Maine",
    "rate": 8.93,
    "rateNote": "2026 schedule: 3.5% up to $350,000; 7.93% to $1,050,000; 8.33% to $3,500,000; 8.93% above, applied to adjusted federal taxable income and then multiplied by the Maine apportionment factor (2026 Form 1120W-ME). Any minimum or alternative tax is not modeled.",
    "rateSource": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_1120w.pdf",
    "rateYear": 2026,
-   "sourceName": "Maine Legislature, 36 M.R.S. §5200-A",
-   "sourceUrl": "https://www.legislature.maine.gov/statutes/36/title36sec5200-A.html",
-   "summary": "Maine's corporate income tax starts from federal taxable income with the modifications in 36 M.R.S. §5200-A, which contain no REIT, dividends-paid deduction or captive REIT provision, so a REIT's federal dividends-paid deduction appears to carry through. Maine uses water's-edge combined reporting for unitary groups (Rule 810); how REITs are treated in a combined report is not addressed and has not been confirmed.",
+   "sourceName": "Maine Revenue Services, 2025 Form 1120ME general instructions",
+   "sourceUrl": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/25_1120me_gen_instr_w_cover_pg.pdf",
+   "summary": "Maine's corporate income tax starts from federal taxable income with the modifications in 36 M.R.S. §5200-A. The 2025 Form 1120ME instructions tell REITs to start from the taxable income on federal Form 1120-REIT (REIT taxable income, after the dividends-paid deduction), so the federal dividends-paid deduction carries through; §5200-A has no REIT or captive REIT addback. Maine uses water's-edge combined reporting for unitary groups (Rule 810); how a REIT is treated in a combined report is not addressed and has not been confirmed.",
    "treatment": "conf",
-   "verified": false,
+   "verified": true,
    "wholeIncome": false
   },
   "MI": {
@@ -2449,24 +2449,33 @@
   },
   "in": {
    "country": "India",
-   "distribution": "At least 90% of net distributable cash flows to unitholders.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-28",
-   "leverage": "Aggregate borrowing limits under SEBI REIT Regulations.",
+   "distribution": "At least 90% of the REIT's net distributable cash flows must go to unitholders, declared at least once every six months; each SPV must pass up at least 90% of its own net distributable cash flows, and a holding company 100% of what it receives (SEBI REIT Regulations, Reg. 18(16)).",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-25",
+   "leverage": "Consolidated borrowings and deferred payments, net of cash, may never exceed 49% of REIT asset value; borrowing beyond 25% needs a credit rating and unitholder approval (Reg. 20).",
    "localFilings": [
     {
-     "form": "ITR-6",
-     "name": "Income tax return for companies"
+     "form": "ITR-5",
+     "name": "Income tax return (business trusts file as an AOP/BOI with business-trust status)"
+    },
+    {
+     "due": "15 June after the tax year",
+     "form": "Form 76",
+     "name": "Annual statement of income distributed to unitholders (replaces Form 64A; Income-tax Act 2025 s.223, Rule 145)"
+    },
+    {
+     "form": "Form 77",
+     "name": "Statement to unitholders, generated from Form 76 on the department's portal"
     }
    ],
    "order": 12,
-   "ownership": "Trust registered with SEBI; units listed on a recognized exchange.",
+   "ownership": "Trust registered with SEBI whose units are offered only by public issue and listed: REIT assets of at least ₹500 crore, an offer of at least ₹250 crore, at least 200 unitholders besides the sponsor group, no outside investor above 25% in the offer, and minimum public holding rules (Reg. 14).",
    "recent": "Taxation and Other Laws (Amendment) Act, 2026 (assent 18 Aug 2026, generally effective 1 Apr 2026): unitholders' dividends are exempt whether or not the SPV chose the concessional tax regime, while the surcharge on such SPVs rises from 10% to 25%.",
    "regime": "InvIT / REIT (SEBI)",
-   "sourceName": "EPRA Global REIT Survey 2025",
-   "sourceUrl": "https://www.epra.com/application/files/8117/5759/1469/EPRA_Global_REIT_Survey_2025_ONLINE_v1.3.pdf",
-   "tests": "At least 80% of value in completed, revenue-generating properties.",
-   "verified": false
+   "sourceName": "SEBI (Real Estate Investment Trusts) Regulations, 2014, amended to 15 Oct 2026; Income Tax Department note on Form 76",
+   "sourceUrl": "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2026/1792669152772.pdf",
+   "tests": "At least 80% of the value of REIT assets must be in completed, rent- or income-generating properties, with up to 20% in other permitted investments; breaches caused by market movements, lease expiries or sales must be cured within six months (Reg. 18(4), 18(5), 18(9)).",
+   "verified": true
   },
   "it": {
    "country": "Italy",
@@ -3518,6 +3527,28 @@
     "Sweden: no REIT regime, 20.6% corporate tax, 4.25%/1.5% stamp duty and property tax rates confirmed against RSM Sweden (March 2026); filing forms still unconfirmed",
     "South Korea: REIT Act Arts. 10, 14-8, 15, 20, 25, 28 and 29 and the Corporate Tax Act Art. 51-2 dividend deduction (entrusted-management and CR-REITs only, on application) confirmed against KLRI translations",
     "Poland: no enacted REIT regime confirmed (KPMG Poland, BANK.pl); recent developments updated to note the draft was never sent to the Sejm and residential REITs were reportedly ruled out in Aug 2025"
+   ]
+  },
+  "2026-11-25": {
+   "added": [],
+   "attention": [
+    "Colorado: Amendment 87 (graduated rates up to 8.4% from 2027) is still awaiting official certification; the page uses 4.4%.",
+    "Kansas: KDOR's 2025 Form K-120 shows a 3.5% normal tax plus 3% surtax, while Tax Foundation shows 4%/7%; confirm the 2026 rate when the 2026 form is published.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Alaska, Idaho, Kansas, Michigan, Montana and Nebraska: REIT treatment rests on the absence of any REIT provision in current statutes and returns; still unverified.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-25",
+   "summary": "Checked federal (IRS letter rulings and guidance), state (KPMG This Week in State Tax for Nov 16, Colorado Amendment 87 status) and international REIT sources since Nov 24; no new enacted REIT rule changes found. Maine and India were verified, with India's filing list corrected.",
+   "title": "Daily rule review",
+   "verified": [
+    "Maine: the 2025 Form 1120ME instructions confirm REITs start from Form 1120-REIT taxable income, so the dividends-paid deduction carries through; no captive REIT addback in 36 M.R.S. §5200-A",
+    "India: 90% distribution, 80% completed-property test, 49% borrowing cap and listing conditions confirmed against the SEBI REIT Regulations (amended to Oct 15, 2026); filings corrected from ITR-6 to ITR-5 plus Forms 76 and 77 (Form 76 replaces Form 64A under the Income-tax Act 2025)",
+    "Kansas, Idaho, Montana and Nebraska: 2025 return instructions and K.S.A. 79-32,138 checked again; none mention REITs, so REIT treatment stays unverified"
    ]
   }
  }
