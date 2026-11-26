@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-25",
-   "nextCheck": "2026-11-26"
+   "lastChecked": "2026-11-26",
+   "nextCheck": "2026-11-27"
   }
  },
  "federal": {
@@ -2222,9 +2222,9 @@
   },
   "br": {
    "country": "Brazil",
-   "distribution": "At least 95% of cash-basis profits from the June 30 and December 31 semiannual balance sheets must be paid out at least every six months (Lei 8.668 art. 10). Distributions bear 20% withholding, final for individuals and creditable for companies. Resident individuals are exempt if the quotas trade only on an exchange or organized OTC market, the fund has at least 100 quotaholders, and the individual holds less than 10% of the quotas and income (Lei 11.033 art. 3, as amended by Lei 14.754/2023). Non-residents investing under CMN Res. 4.373 from non-haven jurisdictions generally pay 15%.",
+   "distribution": "At least 95% of cash-basis profits from the June 30 and December 31 semiannual balance sheets must be paid out at least every six months (Lei 8.668 art. 10). Distributions bear 20% withholding, final for individuals and creditable for companies. Resident individuals are exempt if the quotas trade only on an exchange or organized OTC market, the fund has at least 100 quotaholders, and the individual holds less than 10% of the quotas and income; the exemption is also denied to a group of related individual holders with 30% or more of the quotas or income (Lei 11.033 art. 3, as amended by Lei 14.754/2023 art. 41). New funds have 180 days from first paying in quotas to reach 100 holders. Non-residents investing under CMN Res. 4.373 from non-haven jurisdictions generally pay 15%.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-07",
+   "lastVerified": "2026-11-26",
    "leverage": "No numeric leverage cap in CVM Res. 175 Annex III. The fund cannot lend its resources, may encumber properties only to secure its own obligations, may use derivatives only for hedging, and cannot invest abroad.",
    "localFilings": [
     {
@@ -2250,10 +2250,10 @@
    "ownership": "Closed-end; quotas cannot be redeemed and are distributed through the securities distribution system. No legal minimum number of holders except as a condition of the individual exemption (exchange trading and 100+ holders).",
    "recent": "Lei 14.754/2023 raised the exemption threshold to 100 holders and kept FIIs out of semiannual come-cotas. MP 1.303/2025, which would have taxed new-quota distributions at 5%, lapsed in October 2025. Lei 15.270/2025 (dividend withholding and minimum tax on high incomes from 2026) excludes exempt FII distributions from the minimum-tax base. Under the consumption-tax reform, FIIs meeting widely-held conditions are non-contributors to IBS/CBS (LC 214/2025, LC 227/2026); implementing regulations are still under consultation.",
    "regime": "FII – Fundo de Investimento Imobiliário (Lei 8.668/1993)",
-   "sourceName": "CVM Res. 175 Annex III; Câmara dos Deputados (16 Dec 2025); Mayer Brown on Lei 15.270/2025",
-   "sourceUrl": "https://conteudo.cvm.gov.br/export/sites/cvm/legislacao/resolucoes/anexos/100/resol175consolid_Anexo03.pdf",
+   "sourceName": "Lei 14.754/2023 (Planalto); CVM Res. 175 Annex III; Câmara dos Deputados (16 Dec 2025); Mayer Brown on Lei 15.270/2025",
+   "sourceUrl": "https://planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm",
    "tests": "The fund itself is not taxed on its real estate income; withholding on financial investments can be offset against distribution withholding. If the fund invests in a project whose developer, builder or partner holds more than 25% of the quotas (alone or with related persons), the fund is taxed like a company (Lei 9.779/1999 art. 2). Permitted assets include real estate rights, SPV shares, CRI, LCI, LH, LIG, CEPACs and other FII quotas (CVM Res. 175, Annex III). Gains on quota sales are taxed at 20%.",
-   "verified": false
+   "verified": true
   },
   "ca": {
    "country": "Canada",
@@ -2579,10 +2579,10 @@
   },
   "mx": {
    "country": "Mexico",
-   "distribution": "At least 95% of the trust's fiscal result must be distributed each year, no later than March 15 of the following year. The trustee withholds 30% on distributions to Mexican holders (creditable for Mexican companies); foreign holders are taxed under the non-resident rules of Title V. Congress approved LIF 2027 (Oct 2026) with a rule that scales the 95% minimum down where the new LISR art. 78-B deduction and loss controls inflate the fiscal result; DOF publication not yet confirmed.",
+   "distribution": "At least 95% of the trust's fiscal result must be distributed each year, no later than March 15 of the following year (LISR art. 187 fr. VI). The trustee withholds 30% on distributions to Mexican holders (creditable for Mexican companies); foreign holders are taxed under the non-resident rules of Title V (LISR art. 188). For 2027, LIF 2027 art. 25 fr. XXI scales the 95% minimum by the ratio of the fiscal result computed without LISR art. 78-B to the result computed with it, so the minimum falls where art. 78-B inflates the fiscal result; SAT may issue rules applying it.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-06",
-   "leverage": "PwC (2015) describes FIBRA indebtedness as limited to 50% of asset value unless the technical committee approves otherwise; current CNBV issuer rules not confirmed here.",
+   "lastVerified": "2026-11-26",
+   "leverage": "CNBV issuer rules adopted in June 2014 cap FIBRA leverage at 50% of asset value and require a debt-service coverage ratio of at least 1.0x (Funds Society, June 2014); later CNBV amendments were not checked in this run.",
    "localFilings": [
     {
      "form": "Declaración anual de personas morales",
@@ -2597,12 +2597,12 @@
    ],
    "order": 20,
    "ownership": "Real estate trust certificates (CBFIs) must be placed publicly with the investing public on a Mexican stock exchange and registered with the CNBV.",
-   "recent": "LIF 2027, approved by the Chamber of Deputies on 15 Oct 2026 and by the Senate without changes on 27 Oct 2026, adds a formula reducing the minimum FIBRA distribution in proportion to the increase in fiscal result caused by LISR art. 78-B. Publication in the DOF and the final text are pending confirmation; the LIF takes effect 1 Jan 2027.",
+   "recent": "LIF 2027 was published in the DOF on 13 Nov 2026 and takes effect 1 Jan 2027. Its art. 25 fr. XXI adjusts the FIBRA 95% minimum distribution under LISR art. 187 fr. VI for the effect of the new art. 78-B deduction and loss controls.",
    "regime": "FIBRA (LISR arts. 187–188)",
-   "sourceName": "SDV Asesores, LISR arts. 187–188 compendium (text verified 2026); TaxToday Mexico (Thomson Reuters), Oct 2026",
-   "sourceUrl": "https://sdv.com.mx/compendio/ley-isr/articulo-188/",
+   "sourceName": "DOF 13 Nov 2026, Ley de Ingresos de la Federación 2027 (art. 25 fr. XXI); LISR arts. 187–188 (SDV Asesores compendium, verified 2026); Funds Society (CNBV leverage rules, 2014)",
+   "sourceUrl": "https://sidof.segob.gob.mx/notas/5803757",
    "tests": "The trust must be dedicated to acquiring or building real estate for lease, with at least 70% of its patrimony invested in that real estate. The trust itself is not an income tax payer; income is taxed to certificate holders. Contributors of property can defer gain until the certificates or the property are sold. FIBRA-E is a related vehicle for energy and infrastructure companies (at least 90% of income from qualifying activities).",
-   "verified": false
+   "verified": true
   },
   "nl": {
    "country": "Netherlands",
@@ -2757,8 +2757,8 @@
    "country": "South Africa",
    "distribution": "A REIT (and a 'controlled company' subsidiary of a REIT) deducts 'qualifying distributions' under s25BB, provided at least 75% of its gross income is rental income; the deduction is capped at taxable income before the deduction and taxable capital gains. Listing rules require distribution of at least 75% of distributable earnings each year. Investors are taxed on REIT dividends as income (the ordinary dividend exemption does not apply); dividends tax of 20% applies to non-residents, reduced under tax treaties.",
    "filingsVerified": false,
-   "lastVerified": "2026-11-08",
-   "leverage": "Debt reported as limited to 60% of gross asset value under the JSE REIT listing rules (2015 adviser source; not yet confirmed against current Listings Requirements).",
+   "lastVerified": "2026-11-26",
+   "leverage": "JSE Listings Requirements Section 13 limits a REIT's gearing to 60%; the JSE's 2024 simplification project kept the 60% threshold (Bowmans). Unlisted REITs under Notice R7839 must keep liabilities at or below 60% of total assets.",
    "localFilings": [
     {
      "due": "Last day of the month after the dividend is paid",
@@ -2767,13 +2767,13 @@
     }
    ],
    "order": 22,
-   "ownership": "Listed company (shares held by the public per JSE listing rules), or, for years of assessment beginning after 19 August 2026, an unlisted company owned by specified institutional investors (such as insurers, retirement funds, certain state-owned companies and listed REITs) that meets the conditions in Notice R7839 (Taxand summary: at least 80% property assets, 75% rental revenue, liabilities no more than 60% of assets, gross assets of at least R300 million, 75% distribution within six months of year end, SA residence).",
+   "ownership": "Listed company (shares held by the public per JSE listing rules), or, for years of assessment beginning after 19 August 2026, an unlisted wholly-owned subsidiary whose shares are held, alone or together, by insurers, short-term insurers, retirement funds, state-owned companies listed in Part B of Schedule 3 to the PFMA, or other REITs, meeting the conditions in Notice R7839: at least 80% of asset value attributable to immovable property or property companies, at least 75% of revenue from rental income, liabilities no more than 60% of assets, gross assets of at least R300 million, at least 75% of distributable profits paid within six months of year end (subject to the Companies Act solvency test), and a risk policy barring derivatives outside the normal course of business.",
    "recent": "Notices R7838 and R7839 (Government Gazettes 55220 and 55221, 19 Aug 2026) brought into operation the TLAA 2024 amendment to the REIT definition and prescribed the conditions for unlisted REITs, for years of assessment beginning after 19 August 2026. Earlier: TLAA 2014 allowed IFRS-based property-company tests and required REIT status at disposal for the capital gains disregard. The section 8F(3)(d) linked-unit exclusion is legislated to lapse on 1 January 2027 (SAIT has asked for a later date for some companies; not enacted).",
    "regime": "SA REIT (Income Tax Act s25BB; JSE Listings Requirements)",
-   "sourceName": "ENS via Mondaq (Feb 2015); Cliffe Dekker Hofmeyr Budget Alert 2015; SARS Dividends Tax page",
-   "sourceUrl": "https://www.mondaq.com/southafrica/income-tax/376094/a-recap-of-the-reit-provisions-and-the-latest-amendments-thereto",
+   "sourceName": "Government Gazette 55221, Notice R7839 (19 Aug 2026); Bowmans on JSE Section 13 simplification; SARS Dividends Tax page",
+   "sourceUrl": "https://www.gov.za/sites/default/files/gcis_document/202608/55221gon7839.pdf",
    "tests": "Must be a resident company listed as a REIT on the JSE (or another licensed exchange). Listing conditions reported by advisers: property assets of at least R300 million and at least 75% of income from rental. Rental income includes property rentals, REIT dividends and dividends from 'property companies' (20%+ held, 80%+ property assets). Capital gains on immovable property, REIT shares and property-company shares are disregarded.",
-   "verified": false
+   "verified": true
   }
  },
  "changes": {
@@ -3027,6 +3027,16 @@
    "status": "proposed",
    "summary": "The Autumn Budget 2026 proposes ending sovereign immunity for UK real estate from 1 January 2029. Sovereigns would remain institutional investors for UK REIT purposes, the holder-of-excessive-rights rules would aggregate their connected vehicles, and an optional UK sovereign REIT holding company would pay 15% on gross PIDs. Consultation closes 20 January 2027; legislation expected in Finance Bill 2027-28.",
    "title": "Sovereign investor tax status and sovereign REIT holding company (consultation)"
+  },
+  "2026-11-13-mx-lif-2027-fibra": {
+   "date": "2026-11-13",
+   "effective": "January 1, 2027",
+   "jurisdiction": "Mexico",
+   "sourceName": "Diario Oficial de la Federación, Decreto LIF 2027 (art. 25 fr. XXI), 13 Nov 2026",
+   "sourceUrl": "https://sidof.segob.gob.mx/notas/5803757",
+   "status": "enacted",
+   "summary": "The 2027 Federal Revenue Law, published in the DOF on Nov 13, 2026, scales the FIBRA 95% minimum distribution by the ratio of the fiscal result computed without the new art. 78-B rules to the result computed with them, so FIBRAs need not distribute income that art. 78-B adds to the fiscal result. SAT may issue rules on applying it.",
+   "title": "LIF 2027 published: FIBRA minimum distribution adjusted for LISR art. 78-B"
   },
   "2026-11-13-us-plr-trs-election-extensions": {
    "date": "2026-11-13",
@@ -3549,6 +3559,33 @@
     "Maine: the 2025 Form 1120ME instructions confirm REITs start from Form 1120-REIT taxable income, so the dividends-paid deduction carries through; no captive REIT addback in 36 M.R.S. §5200-A",
     "India: 90% distribution, 80% completed-property test, 49% borrowing cap and listing conditions confirmed against the SEBI REIT Regulations (amended to Oct 15, 2026); filings corrected from ITR-6 to ITR-5 plus Forms 76 and 77 (Form 76 replaces Form 64A under the Income-tax Act 2025)",
     "Kansas, Idaho, Montana and Nebraska: 2025 return instructions and K.S.A. 79-32,138 checked again; none mention REITs, so REIT treatment stays unverified"
+   ]
+  },
+  "2026-11-26": {
+   "added": [],
+   "attention": [
+    "Mexico: FIBRAs should model the 2027 minimum distribution under LIF 2027 art. 25 fr. XXI and watch for SAT rules applying it.",
+    "Colorado: Amendment 87 (graduated rates up to 8.4% from 2027) is still awaiting official certification; the page uses 4.4%.",
+    "Kansas: KDOR's 2025 Form K-120 shows a 3.5% normal tax plus 3% surtax, while Tax Foundation shows 4%/7%; confirm the 2026 rate when the 2026 form is published.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Alaska, Idaho, Kansas, Michigan, Montana and Nebraska: REIT treatment rests on the absence of any REIT provision in current statutes and returns; still unverified.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [
+    "Mexico: LIF 2027 published in the DOF on Nov 13, 2026 adjusts the FIBRA minimum distribution for LISR art. 78-B from Jan 1, 2027 (Diario Oficial de la Federación)"
+   ],
+   "changesFound": 1,
+   "date": "2026-11-26",
+   "summary": "Checked federal (IRS letter rulings and REIT tax news), state (Colorado Amendment 87 status, state REIT and captive REIT developments) and international REIT sources since Nov 25. One enacted change recorded: Mexico's LIF 2027, now published in the DOF, adjusts the FIBRA 95% minimum distribution from 2027; Mexico, Brazil and South Africa regimes were verified.",
+   "title": "Daily rule review",
+   "verified": [
+    "Mexico: 70% real estate, 95% distribution by March 15 and 30% trustee withholding confirmed against LISR arts. 187–188; LIF 2027 publication in the DOF (13 Nov 2026) confirmed; leverage text updated to the 2014 CNBV 50% cap and 1.0x debt-service coverage",
+    "Brazil: FII individual exemption conditions confirmed against Lei 14.754/2023 (Planalto); added the 30% limit for related individual holders and the 180-day window to reach 100 holders",
+    "South Africa: unlisted REIT conditions corrected against Notice R7839 (Gazette 55221), including the 80% asset, 75% rental, 60% liabilities, R300 million and 75% distribution tests and the eligible-holder list; JSE 60% gearing limit confirmed via Bowmans",
+    "China: commercial real estate C-REIT distribution and borrowing limits could not be confirmed from a primary source (the July 2026 SSE guidance found covers interbank REITs only); left unverified",
+    "Pennsylvania: estimated payment and extension forms (REV-857, REV-853) could not be opened on the Department of Revenue site; left unverified"
    ]
   }
  }
