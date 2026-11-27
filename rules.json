@@ -2,8 +2,8 @@
  "meta": {
   "status": {
    "checkedBy": "Claude scheduled review",
-   "lastChecked": "2026-11-26",
-   "nextCheck": "2026-11-27"
+   "lastChecked": "2026-11-27",
+   "nextCheck": "2026-11-28"
   }
  },
  "federal": {
@@ -2196,8 +2196,8 @@
   "be": {
    "country": "Belgium",
    "distribution": "Must distribute at least 80% of the net operational result (as defined by Royal Decree), reduced by the net decrease in debt for the year. No distribution if debt exceeds 65% of assets. Realised gains are exempt if reinvested within four years. Dividend withholding tax is 30%, or 15% if at least 80% of assets are EEA health care property.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-30",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-27",
    "leverage": "Debt capped at 65% of asset fair value; a financial plan must be filed with the FSMA above 50%. Mortgages limited to 50% of portfolio value and 75% of any single property.",
    "localFilings": [
     {
@@ -2206,17 +2206,17 @@
      "note": "Filed electronically through Biztax"
     },
     {
-     "form": "273S",
-     "name": "Withholding tax return on dividends",
-     "note": "Filed with payment of dividend withholding tax"
+     "form": "273A-Div",
+     "name": "Withholding tax (précompte mobilier) return on Belgian-source dividends",
+     "note": "Filed with payment of dividend withholding tax. Form 273S now covers only copyright and neighbouring-rights income (from 11 Jun 2026), not dividends."
     }
    ],
    "order": 14,
    "ownership": "Belgian public limited company (SA/NV) licensed by the FSMA, minimum capital EUR 1.2 million, all shares listed with at least 30% free float. Unlisted institutional BE-REIT subsidiaries are allowed.",
    "recent": "No regime changes identified for 2026. The specialised real estate investment fund (FIIS/GVBF) remains the main unlisted alternative.",
    "regime": "BE-REIT (SIR/GVV, Law of 12 May 2014)",
-   "sourceName": "EPRA Global REIT Survey 2024 (Loyens & Loeff), Belgium chapter",
-   "sourceUrl": "https://www.loyensloeff.com/epra-global-reit-survey-2024.pdf",
+   "sourceName": "SPF Finances notice on new withholding tax forms 273A-Div, 273S and 273 (2026)",
+   "sourceUrl": "https://blog.forumforthefuture.be/fr/article/declarations-au-precompte-mobilier-nouveaux-modeles-disponibles-formulaires-273a-div-273s-et-273/31603",
    "tests": "Principal activity must be active real estate management. No more than 20% of assets in one real estate project (EEA-state tenants excepted). Completed developments cannot be sold within five years. The 25% corporate tax applies only to a minimal base (abnormal benefits, disallowed expenses); rental income and gains are excluded. Converting into a BE-REIT triggers a 15% exit tax on latent gains.",
    "verified": true
   },
@@ -2428,22 +2428,28 @@
   "ie": {
    "country": "Ireland",
    "distribution": "At least 85% of property income each year, with 25% dividend withholding tax on distributions of property income (exemptions or reduced rates for eligible investors). Disposal proceeds not reinvested or used to repay acquisition debt within 24 months are treated as property income.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-29",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-27",
    "leverage": "Borrowings may not exceed 50% of asset market value; property income must cover financing costs at least 1.25 times, with any shortfall taxed (capped at 20% of property income).",
    "localFilings": [
     {
      "form": "CT1",
      "name": "Corporation tax return",
      "note": "Filed through ROS"
+    },
+    {
+     "due": "14th day of the month after the distribution",
+     "form": "DWT return",
+     "name": "Dividend withholding tax return and payment",
+     "note": "Filed through ROS for each month with a distribution, even if no DWT was deducted"
     }
    ],
    "order": 13,
    "ownership": "Irish-incorporated and resident; shares listed on the main market of a recognised EU stock exchange; must not be a close company; one class of ordinary shares.",
    "recent": "Budget 2027 and Finance (No. 2) Bill 2026 (published Oct 2026) made no changes to the REIT or IREF regimes.",
    "regime": "Irish REIT (Part 25A TCA 1997)",
-   "sourceName": "Irish Revenue Notes for Guidance, Part 25A; PwC Worldwide Tax Summaries (Aug 2026)",
-   "sourceUrl": "https://revenue.ie/en/tax-professionals/documents/notes-for-guidance/tca/part25a.pdf",
+   "sourceName": "Irish Revenue, Dividend Withholding Tax: payment and filing a return",
+   "sourceUrl": "https://www.revenue.ie/en/companies-and-charities/dividend-withholding-tax/payment-and-filing-a-return.aspx",
    "tests": "At least 75% of aggregate income and 75% of asset market value from the property rental business. At least three properties, none above 40% of total property value (three-year grace period).",
    "verified": true
   },
@@ -2607,20 +2613,26 @@
   "nl": {
    "country": "Netherlands",
    "distribution": "Mandatory annual distribution of profits, generally subject to 15% Dutch dividend withholding tax; 0% corporate income tax rate.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-27",
    "localFilings": [
     {
      "form": "Vpb return",
      "name": "Corporate income tax return, including non-resident taxpayers with Dutch real estate"
+    },
+    {
+     "due": "Within 1 month after the dividend is made available",
+     "form": "Aangifte dividendbelasting",
+     "name": "Dividend tax return",
+     "note": "15% dividend tax withheld on distributions"
     }
    ],
    "order": 4,
    "ownership": "Shareholder conditions apply under the FBI regime.",
    "recent": "Direct Dutch real estate excluded from the FBI regime from 1 Jan 2025; such entities are taxed at the regular CIT rate.",
    "regime": "FBI",
-   "sourceName": "Loyens & Loeff, Budget Day 2023",
-   "sourceUrl": "https://www.loyensloeff.com/de/insights/news--events/news/budget-day-2023-expected-changes/",
+   "sourceName": "Ondernemersplein (Dutch government), Dividend and dividend tax",
+   "sourceUrl": "https://ondernemersplein.overheid.nl/wetten-en-regels/dividend-dividendbelasting-dividenduitkering/",
    "tests": "Since 1 Jan 2025 an FBI may not invest directly in Dutch real estate. It may hold non-Dutch real estate directly and Dutch real estate indirectly through a regularly taxed subsidiary. 60% financing limit on real estate investments.",
    "verified": true
   },
@@ -2695,14 +2707,21 @@
   },
   "sg": {
    "country": "Singapore",
-   "distribution": "At least 90% of taxable income must be distributed for tax transparency; distributed income is taxed only at the unitholder level.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "distribution": "At least 90% of taxable income must be distributed for tax transparency; distributed income is taxed only at the unitholder level. The trustee withholds tax on distributions to non-resident non-individual and non-qualifying unitholders (final 10% rate for qualifying non-resident non-individuals and funds through 31 Dec 2030).",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-27",
    "leverage": "Single aggregate leverage limit of 50% and minimum interest coverage ratio of 1.5 times for all REITs.",
    "localFilings": [
     {
-     "form": "Form C",
-     "name": "Corporate income tax return"
+     "due": "15 April",
+     "form": "Form UT",
+     "name": "Annual income tax return filed by the REIT trustee",
+     "note": "Filed with audited accounts and a tax computation including the REIT Distributions Tracking Schedule"
+    },
+    {
+     "form": "Forms A and B",
+     "name": "Unitholder declarations collected before each distribution",
+     "note": "Form A from direct non-individual unitholders, Form B from depository agents; support gross or reduced-rate payment"
     },
     {
      "form": "Property tax",
@@ -2713,30 +2732,35 @@
    "ownership": "Listed on SGX and regulated by MAS.",
    "recent": "MAS leverage changes took effect 28 Nov 2024, replacing the 45% limit and 2.5x ICR gate.",
    "regime": "S-REIT",
-   "sourceName": "Allen & Gledhill on MAS changes",
-   "sourceUrl": "https://www.allenandgledhill.com/vn/publication/articles/29485/mas-rationalises-leverage-requirements-and-introduces-additional-disclosures-for-reits",
+   "sourceName": "IRAS e-Tax Guide: Income Tax Treatment of REITs and Approved Sub-trusts (4 Dec 2025)",
+   "sourceUrl": "https://www.iras.gov.sg/media/docs/default-source/e-tax/e-taxguide_income-tax-treatment-of-reits-and-approved-sub-trusts.pdf",
    "tests": "Investment restrictions under the MAS Code on Collective Investment Schemes.",
    "verified": true
   },
   "uk": {
    "country": "United Kingdom",
    "distribution": "90% of property rental business profits (tax basis) within 12 months of year end, plus 100% of distributions received from other REITs, paid as property income distributions.",
-   "filingsVerified": false,
-   "lastVerified": "2026-10-28",
+   "filingsVerified": true,
+   "lastVerified": "2026-11-27",
    "leverage": "Property profits must cover property financing costs at least 1.25 times.",
    "localFilings": [
     {
      "form": "CT600",
      "name": "Company tax return",
      "note": "Non-UK companies with UK property income are within UK corporation tax"
+    },
+    {
+     "form": "CT61(Z)",
+     "name": "Quarterly return of tax withheld on property income distributions",
+     "note": "Quarters ending 31 Mar, 30 Jun, 30 Sep and 31 Dec, plus short periods at the start and end of an accounting period"
     }
    ],
    "order": 2,
    "ownership": "Admitted to trading on a recognised exchange, unless institutional investors hold at least 70% of ordinary shares. Non-close company condition.",
    "recent": "Single-property exception for commercial property of £20m or more applies from April 2023. Proposed (Autumn Budget 2026, consultation to 20 Jan 2027): from 1 Jan 2029 sovereign investors become taxable on UK property but keep institutional-investor status for REITs, with an optional sovereign REIT holding company taxed at 15% on gross PIDs. Announced: from 6 Apr 2027 the basic property income rate, which also sets the PID withholding rate, rises to 24%.",
    "regime": "UK REIT",
-   "sourceName": "IQ-EQ private REIT guide",
-   "sourceUrl": "https://iqeq.com/insights/the-background-requirements-and-considerations-for-establishing-a-private-reit-in-the-uk/",
+   "sourceName": "HMRC Investment Funds Manual IFM28065 (REIT distributions: quarterly returns)",
+   "sourceUrl": "https://www.gov.uk/hmrc-internal-manuals/investment-funds/ifm28065",
    "tests": "Balance of business: at least 75% of profits and 75% of assets from the property rental business. At least 3 properties with none above 40% of value, or one commercial property worth £20m or more.",
    "verified": true
   },
@@ -3586,6 +3610,31 @@
     "South Africa: unlisted REIT conditions corrected against Notice R7839 (Gazette 55221), including the 80% asset, 75% rental, 60% liabilities, R300 million and 75% distribution tests and the eligible-holder list; JSE 60% gearing limit confirmed via Bowmans",
     "China: commercial real estate C-REIT distribution and borrowing limits could not be confirmed from a primary source (the July 2026 SSE guidance found covers interbank REITs only); left unverified",
     "Pennsylvania: estimated payment and extension forms (REV-857, REV-853) could not be opened on the Department of Revenue site; left unverified"
+   ]
+  },
+  "2026-11-27": {
+   "added": [],
+   "attention": [
+    "Colorado: Amendment 87 (graduated rates up to 8.4% from 2027) is still awaiting official certification; the page uses 4.4%.",
+    "Kansas: KDOR's 2025 Form K-120 shows a 3.5% normal tax plus 3% surtax, while Tax Foundation shows 4%/7%; confirm the 2026 rate when the 2026 form is published.",
+    "Vermont: whether a REIT keeps its federal dividends-paid deduction is unconfirmed, and only the $100 minimum tax is modeled.",
+    "South Carolina: confirm with SCDOR whether a REIT's dividends-paid deduction is allowed, since S.C. Code §12-6-50 does not adopt IRC §561.",
+    "Alaska, Idaho, Kansas, Michigan, Montana and Nebraska: REIT treatment rests on the absence of any REIT provision in current statutes and returns; still unverified.",
+    "Pennsylvania: estimated payment and extension forms still not confirmed.",
+    "Belgian REIT clients: dividend withholding tax is now reported on Form 273A-Div rather than Form 273S.",
+    "GitHub: rules.json could not be pushed to snimmagadda-cpa/reit-navigator (repository not authorized for this scheduled run), so the user's own websites were not updated today."
+   ],
+   "changed": [],
+   "changesFound": 0,
+   "date": "2026-11-27",
+   "summary": "Checked federal (IRS letter rulings released through Nov 20 and REIT guidance), state (KPMG This Week in State Tax, captive REIT developments, Colorado Amendment 87 status) and international (UK Autumn Budget 2026, EPRA) sources since Nov 26; no new REIT rule changes found. Filing lists for Belgium, the Netherlands, Singapore, the UK and Ireland were verified, with corrections for Belgium and Singapore.",
+   "title": "Daily rule review",
+   "verified": [
+    "Belgium: dividend withholding tax return corrected from Form 273S to Form 273A-Div (273S now covers only copyright income from 11 Jun 2026), per SPF Finances' notice on the new forms",
+    "Netherlands: added the dividend tax return (aangifte dividendbelasting, due within 1 month of the dividend, 15%) per the Dutch government's Ondernemersplein",
+    "Singapore: REIT trustee return corrected from Form C to Form UT (due 15 April with audited accounts and the REIT Distributions Tracking Schedule); added Forms A and B unitholder declarations and the 10% withholding rate to 31 Dec 2030, per the IRAS e-Tax Guide (4 Dec 2025)",
+    "United Kingdom: added the quarterly CT61(Z) return for tax withheld on property income distributions, per HMRC manual IFM28065",
+    "Ireland: added the monthly ROS dividend withholding tax return (due the 14th of the following month), per Irish Revenue"
    ]
   }
  }
